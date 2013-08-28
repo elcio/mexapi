@@ -4,7 +4,7 @@ A beleza, o prazer e a ironia do conhecimento livre
 :author: Deny Dias
 :category: Society
 :tags: vida, conhecimento, Linux, ética, Slackware, subversão, Mac OS X, tecnologia
-:slug: a-beleza-o-prazer-e-a-ironia-do
+:slug: a-beleza-o-prazer-e-ironia-do
 
 Se você me acompanha (rá, essa é boa!) neste espaço desde o princípio
 (rá, essa é melhor ainda), deve saber que `migrei`_ recentemente do Mac

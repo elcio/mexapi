@@ -4,7 +4,7 @@ Literalidades: exemplificando a moral e a minha bronca com ela
 :author: Deny Dias
 :category: Society
 :tags: moral, vogue, bigthink, ética
-:slug: literalidades-exemplificando-a-moral-e
+:slug: literalidades-exemplificando-moral-e
 
 Li agora no Big Think [*]_: `"Extremely Thin and Very Well-Dressed:" The
 Moral Universe According to Vogue`_\.

@@ -4,7 +4,7 @@ Mercado. Qual é a sua lei?
 :author: Deny Dias
 :category: Society
 :tags: capital, mercado, utopia, sustentabilidade, equilíbrio, ética, dinheiro
-:slug: mercado-qual-e-a-sua-lei
+:slug: mercado-qual-e-sua-lei
 
 Rá! Achou que era só coisa de nerd, né? Sifú!
 
