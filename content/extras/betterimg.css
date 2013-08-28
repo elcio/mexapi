@@ -1,0 +1,104 @@
+/*
+ Author : Deny Dias
+
+ - Credits
+ -      Based on CSS posted by Duncan Lock at:
+ -      http://duncanlock.net/blog/2013/05/29/better-figures-images-plugin-for-pelican/
+*/
+
+/* Images (no caption or legends)
+ - -------------------------------------------------------- */
+img {
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    padding: 4px;
+    margin: 0 auto 1em auto;
+    box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+img.align-left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+img.align-right {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+/* Figures (contains captions and legend)
+ - -------------------------------------------------------- */
+.figure {
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    padding: 4px;
+    margin: 0 auto 1em auto;
+    box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+.figure.align-left {
+  margin: 0 1em 1em 0;
+  float: left;
+}
+
+.figure.align-right {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.figure img {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.figure p.caption {
+    margin: 0;
+    font-size: 80%;
+    padding: 4px;
+    text-align: left;
+}
+
+.figure div.legend {
+    padding: 4px;
+    font-size: 80%;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Sharing
+ *- -------------------------------------------------------- */
+div.share {
+  margin: 10px 0 0;
+}
+
+/* Videos (no caption or legends)
+ *- -------------------------------------------------------- */
+div.video {
+  width: 520px;
+  margin: 0 auto;
+  padding: 7px 0 0px;
+  border: 1px solid #bbb;
+  border-radius: 7px;
+  box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+div.vimeo {
+  width: 520px;
+  margin: 0 auto;
+  padding: 7px 0 0px;
+  border: 1px solid #bbb;
+  border-radius: 7px;
+  box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+div.youtube {
+  width: 520px;
+  margin: 0 auto;
+  padding: 7px 0 0px;
+  border: 1px solid #bbb;
+  border-radius: 7px;
+  box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}

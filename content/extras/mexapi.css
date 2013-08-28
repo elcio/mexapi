@@ -1,0 +1,143 @@
+/*
+ Author : Deny Dias
+
+ - Credits
+ -      Main CSS from Gum theme for Pelican, by Nick Rance.
+ -      Main CSS from Gumby framework
+ -      Some CSS from Twitter Bootstrap - http://twitter.github.io/bootstrap/
+
+*/
+
+/* Links
+ - -------------------------------------------------------- */
+a:hover {
+  color: #d04526;
+}
+
+/* Header
+ - -------------------------------------------------------- */
+h1.sitesubtitle {
+  letter-spacing: 11px;
+  padding-bottom: 0px;
+  margin-left: -3px;
+}
+ 
+h4.sitesubtitle {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#banner strong {
+  display: inline;
+}
+
+@media only screen and (max-width: 767px) {
+  #banner h1 a {
+    font-size: 42px!important;
+    line-height: 44px;
+  }
+  
+  #banner h1.sitesubtitle {
+  letter-spacing:10px;
+  padding-top: 0px;
+  }
+  
+  #banner h4.sitesubtitle {
+    font-size: 20px;
+    font-size: 1.35em;
+  }
+}
+
+/* Article Headings
+ - -------------------------------------------------------- */
+div.entry-content h2 {
+  font-size: 30px;
+  font-size: 1.875em;
+  font-weight: 300;
+  padding-top: 15px;
+}
+
+div.entry-content h3 {
+  font-size: 26px;
+  font-size: 1.165em;
+  font-weight: 300;
+  padding-top: 15px;
+}
+
+/* Lists
+ - -------------------------------------------------------- */
+ul.disc {
+  list-style: disc inside;
+}
+
+ul.circle {
+  list-style: circle inside;
+}
+
+ul.square {
+  list-style: square inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+/* Inline Codeblocks
+ - -------------------------------------------------------- */
+tt.literal {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 13px%;
+  background-color: #F5F5F5;
+  padding: .15em .2em 0 .2em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px
+}
+
+ /* Footnotes
+  - -------------------------------------------------------- */*
+a.fn-backref {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #3498DB;
+}
+
+td.label {
+  height: 100%;
+  padding: 0 10px 0 0;
+}
+
+a.fn-backref:hover {
+  color: #d04526;
+}
+
+ /* Related Posts
+  - -------------------------------------------------------- */
+hr.parts-before {
+  color: #F5F5F5;
+  width: 100%;
+  border-width: 0; 
+  height: 2px;
+  border-top-width: 2px;
+  margin: 0;
+}
+
+hr.parts-after {
+  color: #F5F5F5;
+  width: 100%;
+  border-width: 0; 
+  height: 2px;
+  border-top-width: 2px;
+  margin: 0 0 15px;
+}
+
+hr.related {
+  color: #F5F5F5;
+  width: 100%;
+  border-width: 0; 
+  height: 2px;
+  border-top-width: 2px;
+  margin: 10px 0 2px;
+}
