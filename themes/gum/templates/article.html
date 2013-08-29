@@ -40,13 +40,13 @@
               {{ article.content }}
             </div><!-- /.entry-content -->
             <div class="share">
-              <h4>Share This Article</h4>
+              <hr class="share-before">
+              <h3>Share This Article</h3>
               <a href="https://twitter.com/share" class="twitter-share-button" data-via="denydias" data-size="large" data-dnt="true">Tweet</a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
               <div class="g-plusone" data-annotation="inline" data-width="120"></div>
-            </div>
+            </div><!-- /.share -->
             <div class="related">
-              <hr class="related">
               <h3>Related Posts</h3>
               {% if article.related_posts %}
                 <ul>
@@ -55,8 +55,8 @@
                   {% endfor %}
                 </ul>
               {% endif %}
-              <hr class="related">
-            </div><!-- /.related-posts -->
+              <hr class="related-after">
+            </div><!-- /.related -->
             {% if DISQUS_SITENAME %}
             <div class="comments">
               <h3>Comments</h3>
