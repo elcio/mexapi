@@ -133,7 +133,16 @@ hr.parts-after {
   margin: 0 0 15px;
 }
 
-hr.related {
+hr.share-before {
+  color: #F5F5F5;
+  width: 100%;
+  border-width: 0; 
+  height: 2px;
+  border-top-width: 2px;
+  margin: 20px 0 0;
+}
+
+hr.related-after {
   color: #F5F5F5;
   width: 100%;
   border-width: 0; 
