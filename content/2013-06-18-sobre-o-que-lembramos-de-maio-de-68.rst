@@ -10,7 +10,7 @@ Depois `disso`_, não resta muito a comentar. A sociedade brasileira
 mudou. Ela tem espírito jovial, é fresca de idéias e carrega energia
 para as atitudes. Resistir é inútil, dinossauros reaças.
 
-**Bonus**: No Olho Do Furacão, Michel De Souza
+**Bônus**: No Olho Do Furacão, Michel De Souza
 ==============================================
 
 .. youtube:: zEXea3fsz80
