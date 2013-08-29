@@ -15,7 +15,7 @@ melhor. Deixo esta leitura para vocês:
 
     `Muito mais que Indignados`_
 
-**Bonus**: Space Odity, Chris Hadfield
+**Bônus**: Space Odity, Chris Hadfield
 ======================================
 
 .. youtube:: KaOC9danxNo

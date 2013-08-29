@@ -106,6 +106,7 @@ STATIC_PATHS = ['images',]
 # A list of files to copy from the source to the destination
 # A list of extra files to copy from the source to the destination
 FILES_TO_COPY = (
+                 ('../README.rst', 'README.rst'),
                  ('extras/CNAME', 'CNAME'),
                  ('extras/favicon.ico', 'favicon.ico'),
                  ('extras/robots.txt', 'robots.txt'),

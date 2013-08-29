@@ -86,7 +86,7 @@ que ouço.
 Thomas Bangalter, Daniel (vulgo Vangarde) \ `mora`_ no Brasil!
 (via `@dj\_spark`_)
 
-**Bonus**: Giorgio By Moroder (ft. Giorgio Moroder), Daft Punk
+**Bônus**: Giorgio By Moroder (ft. Giorgio Moroder), Daft Punk
 ==============================================================
 
 .. youtube:: gmpsBeaVrkE
