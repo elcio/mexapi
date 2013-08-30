@@ -59,6 +59,14 @@ Bom, hoje eu cansei de escrever. Em outra parte desse artigo (hell yeah! I've go
 
 Ah, e se quiser, comenta aí! ;)
 
+**Bônus**: Computer Magic - The End of Time
+===========================================
+
+.. youtube:: 1dwNIuN9LN8
+   :width: 500
+   :height: 281
+   :align: center
+
 .. _Python: http://www.python.org/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _AsciiDoc: http://www.methods.co.nz/asciidoc/
