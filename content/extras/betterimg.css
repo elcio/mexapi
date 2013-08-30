@@ -78,7 +78,7 @@ div.share {
  *- -------------------------------------------------------- */
 div.video {
   width: 520px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   padding: 7px 0 0px;
   border: 1px solid #bbb;
   border-radius: 7px;
@@ -87,7 +87,7 @@ div.video {
 
 div.vimeo {
   width: 520px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   padding: 7px 0 0px;
   border: 1px solid #bbb;
   border-radius: 7px;
@@ -96,7 +96,7 @@ div.vimeo {
 
 div.youtube {
   width: 520px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   padding: 7px 0 0px;
   border: 1px solid #bbb;
   border-radius: 7px;
