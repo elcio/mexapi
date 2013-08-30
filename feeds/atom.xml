@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>MexApi</title><link href="http://mexapi.macpress.com.br/" rel="alternate"></link><link href="http://mexapi.macpress.com.br/feeds/atom.xml" rel="self"></link><id>http://mexapi.macpress.com.br/</id><updated>2013-08-11T05:03:00-03:00</updated><entry><title>Moving Slackware to kernel 3.10: NVIDIA and Broadcom drivers fixes</title><link href="http://mexapi.macpress.com.br/2013/08/moving-slackware-to-kernel-310-fixes-to.html" rel="alternate"></link><updated>2013-08-11T05:03:00-03:00</updated><author><name>Deny Dias</name></author><id>tag:mexapi.macpress.com.br,2013-08-11:2013/08/moving-slackware-to-kernel-310-fixes-to.html</id><summary type="html">&lt;p&gt;Last Tuesday, the 6th Aug, Pat (Patrick Volkerding, Slackware’s
+<feed xmlns="http://www.w3.org/2005/Atom"><title>MexApi</title><link href="http://mexapi.macpress.com.br/" rel="alternate"></link><link href="http://mexapi.macpress.com.br/feeds/atom.xml" rel="self"></link><id>http://mexapi.macpress.com.br/</id><updated>2013-08-30T11:12:46-03:00</updated><entry><title>Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub</title><link href="http://mexapi.macpress.com.br/2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html" rel="alternate"></link><updated>2013-08-30T11:12:46-03:00</updated><author><name>Deny Dias</name></author><id>tag:mexapi.macpress.com.br,2013-08-30:2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html</id><summary type="html">&lt;p&gt;My oh my! Migrei meu blog! E estou felicíssimo com o resultado!&lt;/p&gt;
+&lt;p&gt;Primeiro porque isso me deu a oportunidade de aprender para caralho sobre &lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt;, as firulas mais recentes do &lt;span class="caps"&gt;HTML&lt;/span&gt;/&lt;span class="caps"&gt;CSS&lt;/span&gt;/&lt;span class="caps"&gt;JS&lt;/span&gt;, linguagens de marcação até então obscuras para mim (&lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt; e &lt;a class="reference external" href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;) e mais muitas, muitas outras coisas. Segundo porque quando eu criei meu blog, em novembro do ano passado, optei pelo Blogger como algo temporário, para colocar no ar rápido, com o intuito de migrar para algo mais &lt;em&gt;geeky&lt;/em&gt; e que faça o meu estilo, mas que desde então havia deixado de lado, agora está feito. Terceiro porque com isso descobri que a web está voltando, depois de muitas &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Browser_wars"&gt;idas e vindas&lt;/a&gt;, a ser um ambiente civilizado no que diz respeito aos padrões e que tem uma galera porreta que já descorrelacionou conteúdo dinâmico dos stacks do tipo &lt;a class="reference external" href="http://en.wikipedia.org/wiki/LAMP_(software_bundle)"&gt;&lt;span class="caps"&gt;LAMP&lt;/span&gt;&lt;/a&gt;. Quarto porque é um projeto estritamente pessoal e que, como tal, me proprociona muito prazer. E quinto, last but not least, tudo, cedo ou tarde, muda.&lt;/p&gt;
+&lt;p&gt;Mas deixa eu contar como foi isso.&lt;/p&gt;
+&lt;div class="section" id="inception"&gt;
+&lt;h2&gt;Inception&lt;/h2&gt;
+&lt;p&gt;Out of the fucking blue, há umas duas semanas eu estava lendo um &lt;a class="reference external" href="http://alien.slackbook.org/blog/kde-4-11-is-out/"&gt;post&lt;/a&gt; do AlienBOB sobre os novos pacotes do &lt;span class="caps"&gt;KDE&lt;/span&gt; 4.11 para o Slackware -current. No final deste post, o Eric Hameleers (vulgo AlienBOB), pedia o voto do leitor para uma competição de blogs, a "&lt;a class="reference external" href="http://fossforce.com/2013/08/who-will-be-best-personal-linux-or-foss-blog/"&gt;Best Personal Linux or &lt;span class="caps"&gt;FOSS&lt;/span&gt; Blog Competition&lt;/a&gt;". Como eu acho o blog dele muio jóia, eu fui lá votar. Voto dado, fui pra home do &lt;span class="caps"&gt;FOSS&lt;/span&gt; Force e fui ler outras coisas. Não me lembro mais exatamente como, mas a partir do &lt;span class="caps"&gt;FOSS&lt;/span&gt; Force acabei de deparando com um outro post, em outro blog, com uma &lt;a class="reference external" href="http://www.kroah.com/log/blog/2013/07/01/3-dot-10-kernel-development-rate/"&gt;análise da taxa de desenvolvimento do branch 3.10 do kernel do Linux&lt;/a&gt;. O artigo em si é legal, mas curti também o visual desse blog, de propriedade do Greg Kroah-Hartman, que é atualmente é o mantenedor do branch estável do kernel do Linux. E quando fui olhar qual a plataforma ele usava para blogar, &lt;span class="caps"&gt;BAMMM&lt;/span&gt;! Octopress! Epa! Octopress? Que porra é essa? Não é Wordpress? Não é MovableType? Não é Blogger? Que diacho é isso? E fui atrás de saber o que era. Eis que leio:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Octopress. A blogging framework for hackers.&lt;/p&gt;
+&lt;p class="attribution"&gt;—Octopress Website&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Saca a idéia plantada pelos agentes no filme "A Origem" (Inception)? Pois é. Foi o que essa frase "A blogging framework for hackers" fez comigo. E para piorar, no mesmo site, ainda li o seguinte:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site generator powering Github Pages.&lt;/p&gt;
+&lt;p class="attribution"&gt;—Octopress Website&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Como assim? GitHub Pages? Fuck! O GitHub não é um serviço para desenvolvedores do mundo afora colocarem seus repositórios git na nuvem? Bom, é. Mas como eu &lt;a class="reference external" href="http://pages.github.com/"&gt;descobri&lt;/a&gt; em seguida, não é só para isso que o GitHub nos serve.&lt;/p&gt;
+&lt;p&gt;E aí é onde eu começo a preencher a segunda motivação que eu citei lá em cima. E o que era do jeito que você vê na imagem abaixo (guardada para a posteridade) ficou do jeito que você vê agora. Não sei você, mas eu adorei.&lt;/p&gt;
+&lt;div class="figure" style="width: 760px; height: auto; max-width: 100%;"&gt;
+&lt;img alt="" src="/static/images/mexapi_blogger.png" style="width: 760px; height: auto; max-width: 100%;"/&gt;
+&lt;p class="caption"&gt;"Meus textos continuam os mesmos, mas os meus cabelos…"&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="in-for-a-penny-in-for-a-pound"&gt;
+&lt;h2&gt;In for a penny, in for a pound&lt;/h2&gt;
+&lt;p&gt;O &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; é uma aplicação feita em Ruby que come arquivos em liguagens de marcação simplificadas, bate no liquidificador com um tema  feito em Ruby/&lt;span class="caps"&gt;HTML&lt;/span&gt;/&lt;span class="caps"&gt;CSS&lt;/span&gt;/&lt;span class="caps"&gt;JS&lt;/span&gt; e vomita &lt;span class="caps"&gt;HTML&lt;/span&gt; estático. Meu, &lt;span class="caps"&gt;HTML&lt;/span&gt; estático! Eu fazia isso em 2003 com o &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Mambo_(software)"&gt;Mambo&lt;/a&gt;, que sozinho não gerava &lt;span class="caps"&gt;HTML&lt;/span&gt; estático, mas eu e um mau elemento (a sério) do passado adaptamos para fazer justamente isso usando os &lt;a class="reference external" href="http://httpd.apache.org/docs/2.2/howto/ssi.html"&gt;&lt;span class="caps"&gt;SSI&lt;/span&gt;&lt;/a&gt; do Apache.&lt;/p&gt;
+&lt;p&gt;Eu cheguei a baixar, instalar, configurar e publicar alguns testes usando o Octopress no &lt;span class="caps"&gt;GH&lt;/span&gt;-Pages. Super bacaninha, mesmo, de verdade. Mas ele tem um defeito pra mim: é em Ruby. Assim, sem querer ofender nenhum dev Ruby por aí, é apenas a minha humilde opinião, mas eu penso que o Ruby (e outras) está para o Python (e outras) assim como o &lt;a class="reference external" href="http://mindstorms.lego.com/en-us/default.aspx"&gt;Lego Mindstorms&lt;/a&gt; está para o &lt;a class="reference external" href="http://www.arduino.cc/"&gt;Arduino&lt;/a&gt;. Um é um brinquedo legal pacas e que tem muita gente boa criando coisas legais enquanto o outro pode ser brinquedo se quem está criando quiser, mas vai muito além disso.&lt;/p&gt;
+&lt;p&gt;E aí comecei a futucar a internet para averiguar minhas opções. Fiquei estarrecido com a quantidade de &lt;a class="reference external" href="http://siliconangle.com/blog/2012/03/20/5-minimalist-static-html-blog-generators-to-check-out/"&gt;opções&lt;/a&gt; e que isso está sendo feito desde 2002, mas que somente há pouco o movimento começou a ganhar momentum entre os desenvolvedores.&lt;/p&gt;
+&lt;p&gt;Nessa busca encontrei o &lt;a class="reference external" href="http://docs.getpelican.com/en/3.2/"&gt;Pelican&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pelican is a static site generator, written in Python.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Write your content directly with your editor of choice (vim!) in reStructuredText, Markdown, or AsciiDoc formats&lt;/li&gt;
+&lt;li&gt;Includes a simple &lt;span class="caps"&gt;CLI&lt;/span&gt; tool to (re)generate your site&lt;/li&gt;
+&lt;li&gt;Easy to interface with distributed version control systems and web hooks&lt;/li&gt;
+&lt;li&gt;Completely static output is easy to host anywhere&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hummm… Python, Markdown (que eu já conhecia), &lt;span class="caps"&gt;CLI&lt;/span&gt;, &lt;span class="caps"&gt;VCS&lt;/span&gt;, estático, em qualquer lugar. Lendo a documentação, descobri que os recursos eram plenos, uma boa variedade de plugins, bons temas para começar e a integração com o GitHub bem elaborada. Bem, o Pelican parecia a escolha certa. E foi. Tanto que é o Pelican que gera todo este blog que você lê agora.&lt;/p&gt;
+&lt;p&gt;Bom, hoje eu cansei de escrever. Em outra parte desse artigo (hell yeah! I’ve got multi-parts!) eu vou contar como se deram as partes mais técnicas da coisa toda.&lt;/p&gt;
+&lt;p&gt;Ah, e se quiser, comenta aí! ;)&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="pelican"></category><category term="python"></category><category term="development"></category><category term="web"></category><category term="open source"></category><category term="blog"></category><category term="static html"></category></entry><entry><title>Moving Slackware to kernel 3.10: NVIDIA and Broadcom drivers fixes</title><link href="http://mexapi.macpress.com.br/2013/08/moving-slackware-to-kernel-310-fixes-to.html" rel="alternate"></link><updated>2013-08-11T05:03:00-03:00</updated><author><name>Deny Dias</name></author><id>tag:mexapi.macpress.com.br,2013-08-11:2013/08/moving-slackware-to-kernel-310-fixes-to.html</id><summary type="html">&lt;p&gt;Last Tuesday, the 6th Aug, Pat (Patrick Volkerding, Slackware’s
 &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Benevolent_Dictator_for_Life"&gt;&lt;span class="caps"&gt;BDFL&lt;/span&gt;&lt;/a&gt;) released Linux kernel 3.10.5 in the -current tree. Bellow you
 can read Mr. Pat statement for this move:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -382,78 +425,4 @@ dessa casa?" Ela nem pestanejou: "Não! Eu quero ficar aqui até morrer."&lt;/p
 &lt;div class="section" id="bonus-r-e-m-imitation-of-life"&gt;
 &lt;h2&gt;&lt;strong&gt;Bônus&lt;/strong&gt;: &lt;span class="caps"&gt;R.E.M.&lt;/span&gt;- Imitation of Life&lt;/h2&gt;
 &lt;div align="center" class="youtube"&gt;&lt;iframe frameborder="0" height="281" src="https://www.youtube.com/embed/0vqgdSsfqPs" width="500"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-</summary><category term="vida"></category><category term="pais"></category><category term="história"></category><category term="dinheiro"></category><category term="família"></category><category term="filhos"></category></entry><entry><title>A beleza, o prazer e a ironia do conhecimento livre</title><link href="http://mexapi.macpress.com.br/2012/12/a-beleza-o-prazer-e-ironia-do.html" rel="alternate"></link><updated>2012-12-08T10:46:00-02:00</updated><author><name>Deny Dias</name></author><id>tag:mexapi.macpress.com.br,2012-12-08:2012/12/a-beleza-o-prazer-e-ironia-do.html</id><summary type="html">&lt;p&gt;Se você me acompanha (rá, essa é boa!) neste espaço desde o princípio
-(rá, essa é melhor ainda), deve saber que &lt;a class="reference external" href="http://mexapi.macpress.com.br/2012/11/subversao-tecnologica-do-mac-os-x-para.html"&gt;migrei&lt;/a&gt; recentemente do Mac
-&lt;span class="caps"&gt;OS&lt;/span&gt; X para o Slackware Linux. Como eu disse no post inaugural, lá pelos
-idos do ano 96 do século &lt;span class="caps"&gt;XX&lt;/span&gt; usava o Slackware Linux v3. Era complicado,
-coisa de escovador de bits, havia muito pouco conhecimento na grande
-rede. Isso mudou radicalmente. E mudou de uma forma impossível de não
-ser apreciada como bela.&lt;/p&gt;
-&lt;p&gt;De 96 do século &lt;span class="caps"&gt;XX&lt;/span&gt; para 12, quase 13 do século &lt;span class="caps"&gt;XXI&lt;/span&gt;, há algumas
-características substancialmente diferentes no espectro do conhecimento,
-mas as duas principais (&lt;span class="caps"&gt;IMHO&lt;/span&gt;) delas são: liberdade e prazer.&lt;/p&gt;
-&lt;p&gt;Hoje em dia, qualquer pessoa - e por qualquer pessoa eu digo qualquer
-pessoa mesmo - pode aprender sobre praticamente qualquer ramo do
-conhecimento na internet (surface ou deep). Para que isso torne-se
-possível, notei que são necessários apenas alguns poucos pré-requisitos:&lt;/p&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;Vontade&lt;/li&gt;
-&lt;li&gt;Inteligência&lt;/li&gt;
-&lt;li&gt;Compreensão&lt;/li&gt;
-&lt;li&gt;Colaboração&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;A ordem é proposital. Com a vontade vem a motivação. Ela é o princípio
-de tudo e, para chegar ao conhecimento sobre determinado assunto, um
-precisa querer. Este desejo é diretamente proporcional à complexidade do
-tema a ser conhecido.&lt;/p&gt;
-&lt;p&gt;A inteligência então entra em cena para fazer com que se encontre a
-informação necessária e, concomitantemente, para o processamento dessa
-informação afim de produzir conhecimento propriamente dito.&lt;/p&gt;
-&lt;p&gt;Com o conhecimento elaborado, é preciso estar atento para perceber que
-1) você não aprendeu tudo sobre o tema e que 2) ninguém é culpado pela
-escassez ou obrigado a divulgar tudo que se sabe sobre o tema. Isso
-requer compreensão e é especialmente útil em fóruns ou &lt;span class="caps"&gt;IRC&lt;/span&gt;: procure
-&lt;strong&gt;muito&lt;/strong&gt; antes, pergunte com propriedade e detalhes
-depois, não seja mal criado se a resposta não vier como você queria ou
-se ela não vier &lt;em&gt;at all&lt;/em&gt;. Volte ao item 2 da lista de pré-requisitos.&lt;/p&gt;
-&lt;p&gt;E por último vem o aspecto mais bonito de todos: a colaboração. O
-conhecimento adquirido em boa parte do processo não foi produzido por
-você em suas pesquisas e conversas, mas por outros que de um modo ou de
-outro o transmitiram a você. É justo e precioso que qualquer nova peça
-de conhecimento agregado que você produziu, original ou não e por menor
-que pareça, seja compartilhado. Esse é o motor do mundo como ele é hoje.&lt;/p&gt;
-&lt;p&gt;Nas minhas pesquisas para a migração, eu visitei um sem fim de fontes.
-Me deparei com muita coisa inútil, mas em essência, praticamente tudo
-que eu necessitava saber já havia sido destrinchado por alguém, mesmo as
-complexas. De minha parte foram necessários apenas o esforço, os filtros
-e a sensibilidade (pontos 1, 2 e 3 da listinha). As pequenas peças de
-conhecimento que eu não encontrei - ou por não existirem de fato ou por
-incompetência própria com os termos da busca, não importa - eu produzi
-sozinho e, a melhor parte, já estou dividindo com outros. Esta é a
-essência deste blog na verdade.&lt;/p&gt;
-&lt;p&gt;O princípio por trás disso é de uma beleza sublime: se foi útil para
-mim, pode ser útil a outras pessoas também.&lt;/p&gt;
-&lt;p&gt;Mas e o prazer? Onde está o prazer nisso tudo? Bom, se você não
-conseguiu encontrá-lo até aqui, este texto inteiro não é para você. Mas
-pelo bem do conhecimento, eu vou dar uma dica. Há uma quantidade vasta
-de pessoas produzindo conhecimento pelo simples e puro prazer de ampliar
-o conhecimento humano. A maior parte delas não se toca disso, é fato.
-Mas a verdade é que todo e qualquer nerd que colabora ou lança um novo
-projeto de software livre está em busca de coisas muito humanas:
-realização pessoal, reconhecimento comunitário, sucesso, grana etc. O
-‘etc’ pode até incluir razões que não são nobres, mas isso pouco
-importa, pois o resultado final é o mesmo.&lt;/p&gt;
-&lt;p&gt;Há um aspecto por trás disso que carrega um potencial tão bizarro quando
-bonito e irônico. Darei um exemplo apenas: um
-neo-nazi-skinhead-homofóbico-kkk húngaro responde uma questão certeira
-sobre um problema técnico qualquer em um fórum público. Essa peça de
-informação é extremamente útil para um judeu que mora em Israel, um
-negro que mora em São Paulo e um gay da Califórnia. Meu! O nazi ajudou,
-num tapa só (com trocadalho do carilho, pfv), um judeu, um negro e um
-gay, veja você!&lt;/p&gt;
-&lt;p&gt;É por coisas do tipo que eu acho essa porra de conhecimento a coisa mais
-linda desse mundo! Você não? Dispara aí nos comentários.&lt;/p&gt;
-&lt;div class="section" id="bonus-via-romulo-curty-patent-absurdity-2010"&gt;
-&lt;h2&gt;&lt;strong&gt;Bônus&lt;/strong&gt; (via &lt;a class="reference external" href="https://plus.google.com/100091618718907587485"&gt;+Romulo Curty&lt;/a&gt;): Patent Absurdity (2010)&lt;/h2&gt;
-&lt;div align="center" class="vimeo"&gt;&lt;iframe frameborder="0" height="281" src="https://player.vimeo.com/video/44111416" width="500"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-</summary><category term="vida"></category><category term="conhecimento"></category><category term="Linux"></category><category term="ética"></category><category term="Slackware"></category><category term="subversão"></category><category term="Mac OS X"></category><category term="tecnologia"></category></entry></feed>
+</summary><category term="vida"></category><category term="pais"></category><category term="história"></category><category term="dinheiro"></category><category term="família"></category><category term="filhos"></category></entry></feed>

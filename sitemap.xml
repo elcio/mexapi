@@ -5,30 +5,37 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://mexapi.macpress.com.br/index.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/archives.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tags.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/categories.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://mexapi.macpress.com.br/2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html</loc>
+<lastmod>2013-08-30T11:12:46-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 
 <url>
@@ -144,540 +151,589 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://mexapi.macpress.com.br/category/development.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
 <loc>http://mexapi.macpress.com.br/category/music.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/category/politics.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/category/slackware.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/category/society.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/daft-punk.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/tecnologia.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/pos-capitalismo.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/musica.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/slackware.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://mexapi.macpress.com.br/tag/nvidia.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<loc>http://mexapi.macpress.com.br/tag/pelican.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/kernel.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/skype.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/criacao.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/hardware.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/rsync.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/moral.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/historia.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/futebol.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/slackext.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/android.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/conhecimento.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/slackbuild.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/equilibrio.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/dinheiro.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/microphone.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/filhos.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/java.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/network.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/politica.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/mac-os-x.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/vida.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/broadcom.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/esporte.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/bigthink.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/perl.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://mexapi.macpress.com.br/tag/blog.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/aosp.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/build.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/capital.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/familia.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://mexapi.macpress.com.br/tag/open-source.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/alsa.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/development.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/backup.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/sustentabilidade.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/15m.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://mexapi.macpress.com.br/tag/web.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/libglso.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/3105.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/subversao.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/multilib.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/update.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/ramdom-access-memories.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/-current.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/revolucao.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/microutopia.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/mercado.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/pais.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/amarok.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/driver.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/coxinha.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/macbook-pro.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/audio.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/outonobrasileiro.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/apple.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/kde.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://mexapi.macpress.com.br/tag/nvidia.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/etica.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/rsnapshot.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/patch.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/compile.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/fanatismo.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/utopia.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://mexapi.macpress.com.br/tag/static-html.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/switchpm.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/linux.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://mexapi.macpress.com.br/tag/python.html</loc>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/introducao.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/vogue.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/jdk7.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/jdk6.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/jdk5.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
 <loc>http://mexapi.macpress.com.br/tag/software.html</loc>
-<lastmod>2013-08-30T08:26:44-00:00</lastmod>
+<lastmod>2013-08-30T11:34:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.7</priority>
 </url>
