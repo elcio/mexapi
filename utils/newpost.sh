@@ -59,8 +59,10 @@ function metadata () {
   fi
   echo ":tags: !!!SET YOUR TAGS!!!" >> $NEWPOST
   echo ":slug: $CUTSLUG" >> $NEWPOST
+  echo ":status: draft" >> $NEWPOST
   printf '\n%s' >> $NEWPOST
   echo "Write your post. Be smart and avoid bulshit!"  >> $NEWPOST
+  echo "Delete the line \`\`:status: draft\`\` before publish." >> $NEWPOST
 }
 
 ## The main script.
