@@ -19,6 +19,8 @@ from pelicanconf import *
 SITEURL = 'http://mexapi.macpress.com.br'
 RELATIVE_URLS = False
 DELETE_OUTPUT_DIRECTORY = True
+MENUITEMS = (('Archives', SITEURL + '/archives.html'),
+             ('About Me', 'http://about.me/denydias'),)
 
 #################################
 #

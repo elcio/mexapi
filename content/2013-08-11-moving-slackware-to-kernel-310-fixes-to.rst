@@ -4,7 +4,7 @@ Moving Slackware to kernel 3.10: NVIDIA and Broadcom drivers fixes
 :author: Deny Dias
 :category: Slackware
 :tags: development, network, software, update, -current, broadcom, Slackware, nvidia, build, MacBook Pro, Linux, kernel, 3.10.5, slackbuild, driver
-:slug: /moving-slackware-to-kernel-310-fixes-to
+:slug: moving-slackware-to-kernel-310-fixes-to
 
 Last Tuesday, the 6th Aug, Pat (Patrick Volkerding, Slackware's
 `BDFL`_) released Linux kernel 3.10.5 in the -current tree. Bellow you
