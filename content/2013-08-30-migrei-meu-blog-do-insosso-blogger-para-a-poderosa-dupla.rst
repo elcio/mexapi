@@ -8,14 +8,14 @@ Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub
 
 My oh my! Migrei meu blog! E estou felicíssimo com o resultado!
 
-Primeiro porque isso me deu a oportunidade de aprender para caralho sobre `Python`_, as firulas mais recentes do HTML/CSS/JS, linguagens de marcação até então obscuras para mim (`reStructuredText`_ e `Markdown`_) e mais muitas, muitas outras coisas. Segundo porque quando eu criei meu blog, em novembro do ano passado, optei pelo Blogger como algo temporário, para colocar no ar rápido, com o intuito de migrar para algo mais *geeky* e que faça o meu estilo, mas que desde então havia deixado de lado, agora está feito. Terceiro porque com isso descobri que a web está voltando, depois de muitas `idas e vindas`_, a ser um ambiente civilizado no que diz respeito aos padrões e que tem uma galera porreta que já descorrelacionou conteúdo dinâmico dos stacks do tipo `LAMP`_. Quarto porque é um projeto estritamente pessoal e que, como tal, me proprociona muito prazer. E quinto, last but not least, tudo, cedo ou tarde, muda.
+Primeiro porque isso me deu a oportunidade de aprender para caralho sobre `Python`_, as firulas mais recentes do HTML/CSS/JS, linguagens de marcação até então obscuras para mim (`reStructuredText`_ e `AsciiDoc`_) e mais muitas, muitas outras coisas. Segundo porque quando eu criei meu blog, em novembro do ano passado, optei pelo Blogger como algo temporário, para colocar no ar rápido, com o intuito de migrar para algo mais *geeky* e que faça o meu estilo, mas que desde então havia deixado de lado, agora está feito. Terceiro porque com isso descobri que a web está voltando, depois de muitas `idas e vindas`_, a ser um ambiente civilizado no que diz respeito aos padrões e que tem uma galera porreta que já descorrelacionou conteúdo dinâmico dos stacks do tipo `LAMP`_. Quarto porque é um projeto estritamente pessoal e que, como tal, me proprociona muito prazer. E quinto, last but not least, tudo, cedo ou tarde, muda.
 
 Mas deixa eu contar como foi isso.
 
 Inception
 =========
 
-Out of the fucking blue, há umas duas semanas eu estava lendo um `post`_ do AlienBOB sobre os novos pacotes do KDE 4.11 para o Slackware -current. No final deste post, o Eric Hameleers (vulgo AlienBOB), pedia o voto do leitor para uma competição de blogs, a "`Best Personal Linux or FOSS Blog Competition`_". Como eu acho o blog dele muio jóia, eu fui lá votar. Voto dado, fui pra home do FOSS Force e fui ler outras coisas. Não me lembro mais exatamente como, mas a partir do FOSS Force acabei de deparando com um outro post, em outro blog, com uma `análise da taxa de desenvolvimento do branch 3.10 do kernel do Linux`_. O artigo em si é legal, mas curti também o visual desse blog, de propriedade do Greg Kroah-Hartman, que é atualmente é o mantenedor do branch estável do kernel do Linux. E quando fui olhar qual a plataforma ele usava para blogar, BAMMM! Octopress! Epa! Octopress? Que porra é essa? Não é Wordpress? Não é MovableType? Não é Blogger? Que diacho é isso? E fui atrás de saber o que era. Eis que leio:
+Out of the fucking blue, há umas duas semanas eu estava lendo um `post`_ do AlienBOB sobre os novos pacotes do KDE 4.11 para o Slackware -current. No final deste post, o Eric Hameleers (vulgo AlienBOB), pedia o voto do leitor para uma competição de blogs, a "`Best Personal Linux or FOSS Blog Competition`_". Como eu acho o blog dele muio jóia, eu fui lá votar. Voto dado, fui pra home do FOSS Force e fui ler outras coisas. Não me lembro mais exatamente como, mas a partir do FOSS Force acabei de deparando com um outro post, em outro blog, com uma `análise da taxa de desenvolvimento do branch 3.10 do kernel do Linux`_. O artigo em si é legal, mas curti também o visual desse blog, de propriedade do Greg Kroah-Hartman, que é atualmente o mantenedor do branch estável do kernel do Linux. E quando fui olhar qual a plataforma ele usava para blogar, BAMMM! Octopress! Epa! Octopress? Que porra é essa? Não é Wordpress? Não é MovableType? Não é Blogger? Que diacho é isso? E fui atrás de saber o que era. Eis que leio:
 
   Octopress. A blogging framework for hackers.
   
@@ -61,7 +61,7 @@ Ah, e se quiser, comenta aí! ;)
 
 .. _Python: http://www.python.org/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _Markdown: http://daringfireball.net/projects/markdown/
+.. _AsciiDoc: http://www.methods.co.nz/asciidoc/
 .. _idas e vindas: http://en.wikipedia.org/wiki/Browser_wars
 .. _LAMP: http://en.wikipedia.org/wiki/LAMP_(software_bundle)
 .. _post: http://alien.slackbook.org/blog/kde-4-11-is-out/
