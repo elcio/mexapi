@@ -3,7 +3,7 @@ Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub
 :date: 2013-08-30 11:12:46
 :author: Deny Dias
 :category: Development
-:tags: pelican, python, development, web, open source, blog, ruby, static html
+:tags: pelican, python, development, web, open source, blog, static html
 :slug: migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla
 
 My oh my! Migrei meu blog! E estou felicíssimo com o resultado!
@@ -29,7 +29,11 @@ Saca a idéia plantada pelos agentes no filme "A Origem" (Inception)? Pois é. F
   
 Como assim? GitHub Pages? Fuck! O GitHub não é um serviço para desenvolvedores do mundo afora colocarem seus repositórios git na nuvem? Bom, é. Mas como eu `descobri`_ em seguida, não é só para isso que o GitHub nos serve.
 
-E aí é onde eu começo a preencher a segunda motivação que eu citei lá em cima.
+E aí é onde eu começo a preencher a segunda motivação que eu citei lá em cima. E o que era do jeito que você vê na imagem abaixo (guardada para a posteridade) ficou do jeito que você vê agora. Não sei você, mas eu adorei.
+
+.. figure:: /static/images/mexapi_blogger.png
+
+        "Meus textos continuam os mesmos, mas os meus cabelos..."
 
 In for a penny, in for a pound
 ==============================
