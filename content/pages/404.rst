@@ -1,0 +1,10 @@
+:title: Oops! Page not found!
+:slug: 404
+:date: 2013-08-30 08:05:47
+:status: hidden
+
+Sorry, the page you're looking for couldn't be found.
+
+You can either check the address and try again, go back to the `homepage </>`_, or maybe browse the `archives </archives.html>`_.
+
+The guru says it's a 404, whatever that means to you.
