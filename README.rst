@@ -7,4 +7,4 @@ Deny Dias personal weblog. Includes his blog (content sources, settings and stat
 
 Check it out at: `mexapi.macpress.com.br <http://mexapi.macpress.com.br/>`_
 
-MexApi is licensed under `CC0 http://creativecommons.org/publicdomain/zero/1.0/`_.
+MexApi is licensed under `CC0 <http://creativecommons.org/publicdomain/zero/1.0/>`_.
