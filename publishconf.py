@@ -38,7 +38,7 @@ FEED_ATOM = 'feeds/atom.xml'
 #
 #################################
 
-PLUGINS = PLUGINS + ['gzip_cache', 'optimize_images', 'sitemap']
+PLUGINS = PLUGINS + ['gzip_cache', 'minify', 'optimize_images', 'sitemap']
 
 # Enable/disable assets for quick dev
 ENABLE_ASSETS = True

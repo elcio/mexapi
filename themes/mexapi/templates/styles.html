@@ -1,0 +1,11 @@
+{% if ENABLE_ASSETS %}
+{% assets filters="cssprefixer,cssmin", output="min-%(version)s.css", "gumby.css", "style.css", "pygment.css", "mexapi.css", "betterimg.css" %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/{{ ASSET_URL }}" />
+{% endassets %}
+{% else %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/theme/gumby.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/theme/style.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/theme/pygment.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/theme/mexapi.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/theme/betterimg.css" />
+{% endif %}

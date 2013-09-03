@@ -1,19 +1,24 @@
+Django==1.5.2
 Jinja2==2.7.1
 Markdown==2.3.1
 MarkupSafe==0.18
 PIL==1.1.7
 Pygments==1.6
 Unidecode==0.04.13
+argparse==1.2.1
 beautifulsoup4==4.3.1
 blinker==1.3
 cssmin==0.1.4
 cssprefixer==1.4.1
 cssutils==0.9.10
+django-htmlmin==0.6.2
 docutils==0.11
 feedgenerator==1.6
 feedparser==5.1.3
 -e git://github.com/davisp/ghp-import.git@7be39fd07ff50b3432920c9c964d8c4c8f1b5f9d#egg=ghp_import-master
+html5lib==0.95
 pelican==3.2.2
+pelican-minify==0.4
 pelican-vimeo==0.1.0
 pelican-youtube==0.1.0
 pytz==2013b

@@ -1,3 +1,9 @@
+### What is MexApi?
+
+Mexapi is Deny Dias's personal weblog. Includes his blog, links to his social accounts and resume. This is not an API.
+
+This is a custom Pelican theme heavly based on Gum with some customizations to better fit MexApi purposes. Feel free to use it as you wish.
+
 ### What is Gum?
 
 Gum is a clean and responsive theme for [Pelican](https://github.com/getpelican/pelican), based on the [Gumby Framework](http://gumbyframework.com/docs).

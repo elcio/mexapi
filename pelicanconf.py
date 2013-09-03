@@ -20,17 +20,17 @@ SITENAME = u'MexApi'
 SITE_TITLE = 'Deny Dias personal weblog'
 SITESUBTITLE = u'This is not an API'
 SITE_DESCRIPTION = 'Deny Dias personal weblog. Includes his blog, links to his social accounts and resume. This is not an API.'
-COPYRIGHT = u'MexApi is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA 3.0</a>.'
-COPYRIGHT_NOLINK = u'MexApi is licensed under CC BY-SA 3.0.'
+COPYRIGHT = u'MexApi is licensed under <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a>.'
+COPYRIGHT_NOLINK = u'MexApi is licensed under CC0.'
 
 # Locale
 LOCALE = 'C'
 DEFAULT_LANG = u'en'
 TIMEZONE = 'America/Sao_Paulo'
-DEFAULT_DATE_FORMAT = ('%c')
+DEFAULT_DATE_FORMAT = ('%c BRT')
 
 # Theme parameters
-THEME = 'themes/gum'
+THEME = 'themes/mexapi'
 TYPOGRIFY = True
 DEFAULT_PAGINATION = 4
 SUMMARY_MAX_LENGTH = 66
@@ -111,8 +111,6 @@ FILES_TO_COPY = (
                  ('extras/CNAME', 'CNAME'),
                  ('extras/favicon.ico', 'favicon.ico'),
                  ('extras/robots.txt', 'robots.txt'),
-                 ('extras/betterimg.css', 'theme/betterimg.css'),
-                 ('extras/mexapi.css', 'theme/mexapi.css'),
                 )
 
 #################################

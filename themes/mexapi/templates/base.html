@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="{{ DEFAULT_LANG }}"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="{{ DEFAULT_LANG }}"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="{{ DEFAULT_LANG }}"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="{{ DEFAULT_LANG }}"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="{{ DEFAULT_LANG }}" itemscope itemtype="http://schema.org/{% block pageschema %}WebPage{% endblock %}"><!--<![endif]-->
+  <head>
+
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% block title %}{{ SITENAME }}: {{ SITE_TITLE }}{% endblock %}</title>
+
+    <link rel="icon" href="{{ SITEURL }}/favicon.ico" sizes="16x16 24x24 32x32 57x57 64x64 72x72 96x96 110x110 114x114 128x128 195x195 256x256" type="image/vnd.microsoft.icon">
+
+    <meta name="author" content="{{ AUTHOR }}" />
+    <meta name="description" itemprop="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock %}" />
+    <meta name="copyright" content="{{ COPYRIGHT_NOLINK }}" />
+
+{% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+{% endif %}
+{% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+{% endif %}
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+{% endblock head %}
+  </head>
+  
+  <body id="index" class="home">
+  
+    <div class="container">
+      <div class="row">
+        <header id="banner" class="body">
+          <h1 class="sitesubtitle"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+          <h4 class="sitesubtitle"><a href="{{ SITEURL }}"><strong>{{ SITESUBTITLE }}</strong></a></h4>
+        </header><!-- /#banner -->
+        <div id="navigation" class="navbar row">
+          <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+          <ul class="columns">
+            <li><a href="{{ SITEURL }}">Home</a></li>
+{% for title, link in MENUITEMS %}
+            <li><a href="{{ link }}">{{ title }}</a></li>
+{% endfor %}
+{% if DISPLAY_PAGES_ON_MENU %}
+{% for p in PAGES %}
+            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+{% else %}
+{% if DISPLAY_CATEGORIES_ON_MENU %}
+{% for cat, null in categories %}
+            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+{% endfor %}
+{% endif %}
+{% endif %}
+          </ul><!-- /#columns -->
+        </div><!-- /#navigation -->
+
+{% block content %}
+{% endblock %}
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <div class="container.nopad bg">
+      <footer id="credits" class="row">
+        <div class="seven columns left-center">
+          <address id="about" class="vcard body">
+            Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.<br />
+            Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>. {{ COPYRIGHT }}
+          </address>
+        </div><!-- /.seven .columns .left-center -->
+        <div class="seven columns">
+          <div class="row">
+            <ul class="socbtns">
+{% if GITHUB_URL %}
+              <li><div class="btn primary"><a href="{{ GITHUB_URL }}" target="_blank">Github</a></div></li>
+{% endif %}
+{% if TWITTER_URL %}
+              <li><div class="btn twitter"><a href="{{ TWITTER_URL }}" target="_blank">Twitter</a></div></li>
+{% endif %}
+{% if FACEBOOK_URL %}
+              <li><div class="btn facebook"><a href="{{ FACEBOOK_URL }}" target="_blank">Facebook</a></div></li>
+{% endif %}
+{% if GOOGLEPLUS_URL %}
+              <li><div class="btn danger"><a href="{{ GOOGLEPLUS_URL }}" target="_blank">Google+</a></div></li>
+{% endif %}
+            </ul><!-- /.socbtns -->
+          </div><!-- /.row -->
+        </div><!-- /.seven .columns -->
+      </footer><!-- /#credits -->
+    </div><!-- /.container.nopad .bg -->
+
+{% include 'styles.html' %}
+{% include 'scripts.html' %}
+
+  </body>
+</html>

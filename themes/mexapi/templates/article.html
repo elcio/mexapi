@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }}: {{ article.title|striptags }}{% endblock %}
+{% block content %}
+        <section id="content" class="body">
+          <div class="row">
+            <div class="eleven columns">
+
+              <header>
+                <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+{% import 'translations.html' as translations with context %}
+{{ translations.translations_for(article) }}
+              </header>
+              <footer class="post-info">
+                <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
+{% if article.author %}
+                <address class="vcard author">By {{ article.author }}</address>
+{% endif %}
+              </footer><!-- /.post-info -->
+{% if article.metadata.parts_articles %}
+              <hr class="parts-before">
+              <h3>This post is part of a series:</h3>
+              <ol class="parts">
+{% for part_article in article.metadata.parts_articles %}
+                <li {% if part_article == article %}class="active"{% endif %}>
+                  <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                </li>
+                {% endfor %}
+              </ol>
+              <hr class="parts-afer">
+            {% endif %}
+              <div class="entry-content">
+                {{ article.content }}
+              </div><!-- /.entry-content -->
+              <div class="share">
+                <hr class="share-before">
+                <h3>Word of Mouth</h3>
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style">
+                  <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                  <a class="addthis_button_tweet"></a>
+                  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52210248541aab63"></script>
+                <!-- AddThis Button END -->
+              </div><!-- /.share -->
+              <div class="related">
+                <h3>Related Posts</h3>
+{% if article.related_posts %}
+                <ul>
+{% for related_post in article.related_posts %}
+                  <li><i class="icon-doc-text-inv"></i><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+{% endfor %}
+                </ul>
+{% endif %}
+                <hr class="related-after">
+              </div><!-- /.related -->
+{% if DISQUS_SITENAME %}
+              <div class="comments">
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                  var disqus_identifier = "{{ article.url }}";
+                  (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                  })();
+                </script>
+              </div><!-- /.comments -->
+{% endif %}
+            </div><!-- /.eleven.columns -->
+{% include 'sidebar.html' %}
+
+          </div><!-- /.row -->
+        </section><!-- /#content -->
+{% endblock content %}
