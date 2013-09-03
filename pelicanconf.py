@@ -110,6 +110,7 @@ FILES_TO_COPY = (
                  ('extras/404.html', '404.html'),
                  ('extras/CNAME', 'CNAME'),
                  ('extras/favicon.ico', 'favicon.ico'),
+                 ('extras/ga_optout.html', 'ga_optout.html'),
                  ('extras/robots.txt', 'robots.txt'),
                 )
 

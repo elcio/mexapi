@@ -16,6 +16,7 @@
                 <address class="vcard author">By {{ article.author }}</address>
 {% endif %}
               </footer><!-- /.post-info -->
+
 {% if article.metadata.parts_articles %}
               <hr class="parts-before">
               <h3>This post is part of a series:</h3>
@@ -24,13 +25,15 @@
                 <li {% if part_article == article %}class="active"{% endif %}>
                   <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
                 </li>
-                {% endfor %}
+{% endfor %}
               </ol>
               <hr class="parts-afer">
-            {% endif %}
+{% endif %}
+
               <div class="entry-content">
                 {{ article.content }}
               </div><!-- /.entry-content -->
+
               <div class="share">
                 <hr class="share-before">
                 <h3>Word of Mouth</h3>
@@ -44,6 +47,7 @@
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52210248541aab63"></script>
                 <!-- AddThis Button END -->
               </div><!-- /.share -->
+
               <div class="related">
                 <h3>Related Posts</h3>
 {% if article.related_posts %}
@@ -55,6 +59,7 @@
 {% endif %}
                 <hr class="related-after">
               </div><!-- /.related -->
+
 {% if DISQUS_SITENAME %}
               <div class="comments">
                 <h3>Comments</h3>
@@ -69,6 +74,7 @@
                 </script>
               </div><!-- /.comments -->
 {% endif %}
+
             </div><!-- /.eleven.columns -->
 {% include 'sidebar.html' %}
 
