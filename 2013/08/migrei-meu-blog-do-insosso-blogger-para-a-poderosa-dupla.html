@@ -1,11 +1,196 @@
-<!DOCTYPE html><!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]--><!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]--><!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]--><!--[if IE 9]><html class="no-js ie9" lang="en"> <![endif]--><html class="no-js" itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta charset="utf-8"/><title>MexApi: Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub</title><link href="http://mexapi.macpress.com.br/favicon.ico" rel="icon" sizes="16x16 24x24 32x32 57x57 64x64 72x72 96x96 110x110 114x114 128x128 195x195 256x256" type="image/vnd.microsoft.icon"/><meta content="Deny Dias" name="author"/><meta content="Deny Dias personal weblog. Includes his blog, links to his social accounts and resume. This is not an API." itemprop="description" name="description"/><meta content="MexApi is licensed under CC0." name="copyright"/><link href="http://mexapi.macpress.com.br/feeds/rss.xml" rel="alternate" title="MexApi RSS Feed" type="application/rss+xml"/><link href="http://mexapi.macpress.com.br/feeds/atom.xml" rel="alternate" title="MexApi Atom Feed" type="application/atom+xml"/><meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/></head><body class="home" id="index"><div class="container"><div class="row"><header class="body" id="banner"><h1 class="sitesubtitle"><a href="http://mexapi.macpress.com.br">MexApi</a></h1><h4 class="sitesubtitle"><a href="http://mexapi.macpress.com.br"><strong>This is not an API</strong></a></h4></header><div class="navbar row" id="navigation"><a class="toggle" gumby-trigger="#navigation &gt; ul" href="#"><i class="icon-menu"></i></a> <ul class="columns"><li><a href="http://mexapi.macpress.com.br">Home</a></li><li><a href="http://mexapi.macpress.com.br/archives.html">Archives</a></li><li><a href="http://about.me/denydias">About Me</a></li></ul></div><section class="body" id="content"><div class="row"><div class="eleven columns"><header><h2 class="entry-title"><a href="http://mexapi.macpress.com.br/2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html" rel="bookmark" title="Permalink to Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub">Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub</a></h2></header><footer class="post-info"><abbr class="published" title="2013-08-30T11:12:46">Fri Aug 30 11:12:46 2013 BRT</abbr><address class="vcard author">By Deny Dias</address></footer><div class="entry-content"><p>My oh my! Migrei meu blog! E estou felicíssimo com o resultado!</p><p>Primeiro porque isso me deu a oportunidade de aprender para caralho sobre <a class="reference external" href="http://www.python.org/">Python</a>, as firulas mais recentes do <span class="caps">HTML</span>/<span class="caps">CSS</span>/<span class="caps">JS</span>, linguagens de marcação até então obscuras para mim (<a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> e <a class="reference external" href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a>) e mais muitas, muitas outras coisas. Segundo porque quando eu criei meu blog, em novembro do ano passado, optei pelo Blogger como algo temporário, para colocar no ar rápido, com o intuito de migrar para algo mais <em>geeky</em> e que faça o meu estilo, mas que desde então havia deixado de lado, agora está feito. Terceiro porque com isso descobri que a web está voltando, depois de muitas <a class="reference external" href="http://en.wikipedia.org/wiki/Browser_wars">idas e vindas</a>, a ser um ambiente civilizado no que diz respeito aos padrões e que tem uma galera porreta que já descorrelacionou conteúdo dinâmico dos stacks do tipo <a class="reference external" href="http://en.wikipedia.org/wiki/LAMP_(software_bundle)"><span class="caps">LAMP</span></a>. Quarto porque é um projeto estritamente pessoal e que, como tal, me proprociona muito prazer. E quinto, last but not least, tudo, cedo ou tarde, muda.</p><p>Mas deixa eu contar como foi isso.</p><div class="section" id="inception"><h2>Inception</h2><p>Out of the fucking blue, há umas duas semanas eu estava lendo um <a class="reference external" href="http://alien.slackbook.org/blog/kde-4-11-is-out/">post</a> do AlienBOB sobre os novos pacotes do <span class="caps">KDE</span> 4.11 para o Slackware -current. No final deste post, o Eric Hameleers (vulgo AlienBOB), pedia o voto do leitor para uma competição de blogs, a "<a class="reference external" href="http://fossforce.com/2013/08/who-will-be-best-personal-linux-or-foss-blog/">Best Personal Linux or <span class="caps">FOSS</span> Blog Competition</a>". Como eu acho o blog dele muio jóia, eu fui lá votar. Voto dado, fui pra home do <span class="caps">FOSS</span> Force e fui ler outras coisas. Não me lembro mais exatamente como, mas a partir do <span class="caps">FOSS</span> Force acabei de deparando com um outro post, em outro blog, com uma <a class="reference external" href="http://www.kroah.com/log/blog/2013/07/01/3-dot-10-kernel-development-rate/">análise da taxa de desenvolvimento do branch 3.10 do kernel do Linux</a>. O artigo em si é legal, mas curti também o visual desse blog, de propriedade do Greg Kroah-Hartman, que é atualmente o mantenedor do branch estável do kernel do Linux. E quando fui olhar qual a plataforma ele usava para blogar, <span class="caps">BAMMM</span>! Octopress! Epa! Octopress? Que porra é essa? Não é Wordpress? Não é MovableType? Não é Blogger? Que diacho é isso? E fui atrás de saber o que era. Eis que leio:</p><blockquote><p>Octopress. A blogging framework for hackers.</p><p class="attribution">—Octopress Website</p></blockquote><p>Saca a idéia plantada pelos agentes no filme "A Origem" (Inception)? Pois é. Foi o que essa frase "A blogging framework for hackers" fez comigo. E para piorar, no mesmo site, ainda li o seguinte:</p><blockquote><p>Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site generator powering Github Pages.</p><p class="attribution">—Octopress Website</p></blockquote><p>Como assim? GitHub Pages? Fuck! O GitHub não é um serviço para desenvolvedores do mundo afora colocarem seus repositórios git na nuvem? Bom, é. Mas como eu <a class="reference external" href="http://pages.github.com/">descobri</a> em seguida, não é só para isso que o GitHub nos serve.</p><p>E aí é onde eu começo a preencher a segunda motivação que eu citei lá em cima. E o que era do jeito que você vê na imagem abaixo (guardada para a posteridade) ficou do jeito que você vê agora. Não sei você, mas eu adorei.</p><div class="figure" style="width: 760px; height: auto; max-width: 100%;"><img alt="" src="/static/images/mexapi_blogger.png" style="width: 760px; height: auto; max-width: 100%;"/><p class="caption">"Meus textos continuam os mesmos, mas os meus cabelos…"</p></div></div><div class="section" id="in-for-a-penny-in-for-a-pound"><h2>In for a penny, in for a pound</h2><p>O <a class="reference external" href="http://octopress.org/">Octopress</a> é uma aplicação feita em Ruby que come arquivos em liguagens de marcação simplificadas, bate no liquidificador com um tema feito em Ruby/<span class="caps">HTML</span>/<span class="caps">CSS</span>/<span class="caps">JS</span> e vomita <span class="caps">HTML</span> estático. Meu, <span class="caps">HTML</span> estático! Eu fazia isso em 2003 com o <a class="reference external" href="http://en.wikipedia.org/wiki/Mambo_(software)">Mambo</a>, que sozinho não gerava <span class="caps">HTML</span> estático, mas eu e um mau elemento (a sério) do passado adaptamos para fazer justamente isso usando os <a class="reference external" href="http://httpd.apache.org/docs/2.2/howto/ssi.html"><span class="caps">SSI</span></a> do Apache.</p><p>Eu cheguei a baixar, instalar, configurar e publicar alguns testes usando o Octopress no <span class="caps">GH</span>-Pages. Super bacaninha, mesmo, de verdade. Mas ele tem um defeito pra mim: é em Ruby. Assim, sem querer ofender nenhum dev Ruby por aí, é apenas a minha humilde opinião, mas eu penso que o Ruby (e outras) está para o Python (e outras) assim como o <a class="reference external" href="http://mindstorms.lego.com/en-us/default.aspx">Lego Mindstorms</a> está para o <a class="reference external" href="http://www.arduino.cc/">Arduino</a>. Um é um brinquedo legal pacas e que tem muita gente boa criando coisas legais enquanto o outro pode ser brinquedo se quem está criando quiser, mas vai muito além disso.</p><p>E aí comecei a futucar a internet para averiguar minhas opções. Fiquei estarrecido com a quantidade de <a class="reference external" href="http://siliconangle.com/blog/2012/03/20/5-minimalist-static-html-blog-generators-to-check-out/">opções</a> e que isso está sendo feito desde 2002, mas que somente há pouco o movimento começou a ganhar momentum entre os desenvolvedores.</p><p>Nessa busca encontrei o <a class="reference external" href="http://docs.getpelican.com/en/3.2/">Pelican</a>:</p><blockquote><p>Pelican is a static site generator, written in Python.</p><blockquote><ol class="arabic simple"><li>Write your content directly with your editor of choice (vim!) in reStructuredText, Markdown, or AsciiDoc formats</li><li>Includes a simple <span class="caps">CLI</span> tool to (re)generate your site</li><li>Easy to interface with distributed version control systems and web hooks</li><li>Completely static output is easy to host anywhere</li></ol></blockquote></blockquote><p>Hummm… Python, Markdown (que eu já conhecia), <span class="caps">CLI</span>, <span class="caps">VCS</span>, estático, em qualquer lugar. Lendo a documentação, descobri que os recursos eram plenos, uma boa variedade de plugins, bons temas para começar e a integração com o GitHub bem elaborada. Bem, o Pelican parecia a escolha certa. E foi. Tanto que é o Pelican que gera todo este blog que você lê agora.</p><p>Bom, hoje eu cansei de escrever. Em outra parte desse artigo (hell yeah! I’ve got multi-parts!) eu vou contar como se deram as partes mais técnicas da coisa toda.</p><p>Ah, e se quiser, comenta aí! ;)</p></div><div class="section" id="bonus-computer-magic-the-end-of-time"><h2><strong>Bônus</strong>: Computer Magic - The End of Time</h2><div align="center" class="youtube"><iframe frameborder="0" height="281" src="https://www.youtube.com/embed/1dwNIuN9LN8" width="500"></iframe></div></div></div><div class="share"><hr class="share-before"/><h3>Word of Mouth</h3><div class="addthis_toolbox addthis_default_style"><a class="addthis_button_google_plusone" g:plusone:size="medium"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> </div><script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52210248541aab63" type="text/javascript"></script></div><div class="related"><h3>Related Posts</h3><ul><li><i class="icon-doc-text-inv"></i><a href="http://mexapi.macpress.com.br/2013/04/time-machineish-backups-under-linux.html">Time Machine’ish backups under Linux</a></li><li><i class="icon-doc-text-inv"></i><a href="http://mexapi.macpress.com.br/2013/04/keeping-slackware64-current-multilib-up.html">Keeping Slackware -current, multilib up-to-date kinda automatically</a></li><li><i class="icon-doc-text-inv"></i><a href="http://mexapi.macpress.com.br/2013/08/moving-slackware-to-kernel-310-fixes-to.html">Moving Slackware to kernel 3.10: <span class="caps">NVIDIA</span> and Broadcom drivers fixes</a></li></ul><hr class="related-after"/></div><div class="comments"><h3>Comments</h3><div id="disqus_thread"></div><script type="text/javascript">
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en" itemscope itemtype="http://schema.org/WebPage"><!--<![endif]-->
+  <head>
+
+    <meta charset="utf-8" />
+    <title>MexApi: Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub</title>
+
+    <link rel="icon" href="http://mexapi.macpress.com.br/favicon.ico" sizes="16x16 24x24 32x32 57x57 64x64 72x72 96x96 110x110 114x114 128x128 195x195 256x256" type="image/vnd.microsoft.icon">
+
+    <meta name="author" content="Deny Dias" />
+    <meta name="description" itemprop="description" content="Deny Dias personal weblog. Includes his blog, links to his social accounts and resume. This is not an API." />
+    <meta name="copyright" content="MexApi is licensed under CC0." />
+
+    <link href="http://mexapi.macpress.com.br/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="MexApi RSS Feed" />
+    <link href="http://mexapi.macpress.com.br/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="MexApi Atom Feed" />
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  </head>
+  
+  <body id="index" class="home">
+  
+    <div class="container">
+      <div class="row">
+        <header id="banner" class="body">
+          <h1 class="sitesubtitle"><a href="http://mexapi.macpress.com.br">MexApi</a></h1>
+          <h4 class="sitesubtitle"><a href="http://mexapi.macpress.com.br"><strong>This is not an API</strong></a></h4>
+        </header><!-- /#banner -->
+        <div id="navigation" class="navbar row">
+          <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+          <ul class="columns">
+            <li><a href="http://mexapi.macpress.com.br">Home</a></li>
+            <li><a href="http://mexapi.macpress.com.br/archives.html">Archives</a></li>
+            <li><a href="http://about.me/denydias">About Me</a></li>
+          </ul><!-- /#columns -->
+        </div><!-- /#navigation -->
+
+        <section id="content" class="body">
+          <div class="row">
+            <div class="eleven columns">
+
+              <header>
+                <h2 class="entry-title"><a href="http://mexapi.macpress.com.br/2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html" rel="bookmark" title="Permalink to Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub">Migrei meu blog: do insosso Blogger para a poderosa dupla&nbsp;Pelican/GitHub</a></h2>
+
+              </header>
+              <footer class="post-info">
+                <abbr class="published" title="2013-08-30T11:12:46">Fri Aug 30 11:12:46 2013 BRT</abbr>
+                <address class="vcard author">By Deny Dias</address>
+              </footer><!-- /.post-info -->
+              <div class="entry-content">
+                <html><head></head><body><p>My oh my! Migrei meu blog! E estou felicíssimo com o resultado!</p>
+<p>Primeiro porque isso me deu a oportunidade de aprender para caralho sobre <a class="reference external" href="http://www.python.org/">Python</a>, as firulas mais recentes do <span class="caps">HTML</span>/<span class="caps">CSS</span>/<span class="caps">JS</span>, linguagens de marcação até então obscuras para mim (<a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> e <a class="reference external" href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a>) e mais muitas, muitas outras coisas. Segundo porque quando eu criei meu blog, em novembro do ano passado, optei pelo Blogger como algo temporário, para colocar no ar rápido, com o intuito de migrar para algo mais <em>geeky</em> e que faça o meu estilo, mas que desde então havia deixado de lado, agora está feito. Terceiro porque com isso descobri que a web está voltando, depois de muitas <a class="reference external" href="http://en.wikipedia.org/wiki/Browser_wars">idas e vindas</a>, a ser um ambiente civilizado no que diz respeito aos padrões e que tem uma galera porreta que já descorrelacionou conteúdo dinâmico dos stacks do tipo <a class="reference external" href="http://en.wikipedia.org/wiki/LAMP_(software_bundle)"><span class="caps">LAMP</span></a>. Quarto porque é um projeto estritamente pessoal e que, como tal, me proprociona muito prazer. E quinto, last but not least, tudo, cedo ou tarde, muda.</p>
+<p>Mas deixa eu contar como foi isso.</p>
+<div class="section" id="inception">
+<h2>Inception</h2>
+<p>Out of the fucking blue, há umas duas semanas eu estava lendo um <a class="reference external" href="http://alien.slackbook.org/blog/kde-4-11-is-out/">post</a> do AlienBOB sobre os novos pacotes do <span class="caps">KDE</span> 4.11 para o Slackware -current. No final deste post, o Eric Hameleers (vulgo AlienBOB), pedia o voto do leitor para uma competição de blogs, a "<a class="reference external" href="http://fossforce.com/2013/08/who-will-be-best-personal-linux-or-foss-blog/">Best Personal Linux or <span class="caps">FOSS</span> Blog Competition</a>". Como eu acho o blog dele muio jóia, eu fui lá votar. Voto dado, fui pra home do <span class="caps">FOSS</span> Force e fui ler outras coisas. Não me lembro mais exatamente como, mas a partir do <span class="caps">FOSS</span> Force acabei de deparando com um outro post, em outro blog, com uma <a class="reference external" href="http://www.kroah.com/log/blog/2013/07/01/3-dot-10-kernel-development-rate/">análise da taxa de desenvolvimento do branch 3.10 do kernel do Linux</a>. O artigo em si é legal, mas curti também o visual desse blog, de propriedade do Greg Kroah-Hartman, que é atualmente o mantenedor do branch estável do kernel do Linux. E quando fui olhar qual a plataforma ele usava para blogar, <span class="caps">BAMMM</span>! Octopress! Epa! Octopress? Que porra é essa? Não é Wordpress? Não é MovableType? Não é Blogger? Que diacho é isso? E fui atrás de saber o que era. Eis que leio:</p>
+<blockquote>
+<p>Octopress. A blogging framework for hackers.</p>
+<p class="attribution">—Octopress Website</p>
+</blockquote>
+<p>Saca a idéia plantada pelos agentes no filme "A Origem" (Inception)? Pois é. Foi o que essa frase "A blogging framework for hackers" fez comigo. E para piorar, no mesmo site, ainda li o seguinte:</p>
+<blockquote>
+<p>Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site generator powering Github Pages.</p>
+<p class="attribution">—Octopress Website</p>
+</blockquote>
+<p>Como assim? GitHub Pages? Fuck! O GitHub não é um serviço para desenvolvedores do mundo afora colocarem seus repositórios git na nuvem? Bom, é. Mas como eu <a class="reference external" href="http://pages.github.com/">descobri</a> em seguida, não é só para isso que o GitHub nos serve.</p>
+<p>E aí é onde eu começo a preencher a segunda motivação que eu citei lá em cima. E o que era do jeito que você vê na imagem abaixo (guardada para a posteridade) ficou do jeito que você vê agora. Não sei você, mas eu adorei.</p>
+<div class="figure" style="width: 760px; height: auto; max-width: 100%;">
+<img alt="" src="/static/images/mexapi_blogger.png" style="width: 760px; height: auto; max-width: 100%;"/>
+<p class="caption">"Meus textos continuam os mesmos, mas os meus cabelos…"</p>
+</div>
+</div>
+<div class="section" id="in-for-a-penny-in-for-a-pound">
+<h2>In for a penny, in for a pound</h2>
+<p>O <a class="reference external" href="http://octopress.org/">Octopress</a> é uma aplicação feita em Ruby que come arquivos em liguagens de marcação simplificadas, bate no liquidificador com um tema  feito em Ruby/<span class="caps">HTML</span>/<span class="caps">CSS</span>/<span class="caps">JS</span> e vomita <span class="caps">HTML</span> estático. Meu, <span class="caps">HTML</span> estático! Eu fazia isso em 2003 com o <a class="reference external" href="http://en.wikipedia.org/wiki/Mambo_(software)">Mambo</a>, que sozinho não gerava <span class="caps">HTML</span> estático, mas eu e um mau elemento (a sério) do passado adaptamos para fazer justamente isso usando os <a class="reference external" href="http://httpd.apache.org/docs/2.2/howto/ssi.html"><span class="caps">SSI</span></a> do Apache.</p>
+<p>Eu cheguei a baixar, instalar, configurar e publicar alguns testes usando o Octopress no <span class="caps">GH</span>-Pages. Super bacaninha, mesmo, de verdade. Mas ele tem um defeito pra mim: é em Ruby. Assim, sem querer ofender nenhum dev Ruby por aí, é apenas a minha humilde opinião, mas eu penso que o Ruby (e outras) está para o Python (e outras) assim como o <a class="reference external" href="http://mindstorms.lego.com/en-us/default.aspx">Lego Mindstorms</a> está para o <a class="reference external" href="http://www.arduino.cc/">Arduino</a>. Um é um brinquedo legal pacas e que tem muita gente boa criando coisas legais enquanto o outro pode ser brinquedo se quem está criando quiser, mas vai muito além disso.</p>
+<p>E aí comecei a futucar a internet para averiguar minhas opções. Fiquei estarrecido com a quantidade de <a class="reference external" href="http://siliconangle.com/blog/2012/03/20/5-minimalist-static-html-blog-generators-to-check-out/">opções</a> e que isso está sendo feito desde 2002, mas que somente há pouco o movimento começou a ganhar momentum entre os desenvolvedores.</p>
+<p>Nessa busca encontrei o <a class="reference external" href="http://docs.getpelican.com/en/3.2/">Pelican</a>:</p>
+<blockquote>
+<p>Pelican is a static site generator, written in Python.</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Write your content directly with your editor of choice (vim!) in reStructuredText, Markdown, or AsciiDoc formats</li>
+<li>Includes a simple <span class="caps">CLI</span> tool to (re)generate your site</li>
+<li>Easy to interface with distributed version control systems and web hooks</li>
+<li>Completely static output is easy to host anywhere</li>
+</ol>
+</blockquote>
+</blockquote>
+<p>Hummm… Python, Markdown (que eu já conhecia), <span class="caps">CLI</span>, <span class="caps">VCS</span>, estático, em qualquer lugar. Lendo a documentação, descobri que os recursos eram plenos, uma boa variedade de plugins, bons temas para começar e a integração com o GitHub bem elaborada. Bem, o Pelican parecia a escolha certa. E foi. Tanto que é o Pelican que gera todo este blog que você lê agora.</p>
+<p>Bom, hoje eu cansei de escrever. Em outra parte desse artigo (hell yeah! I’ve got multi-parts!) eu vou contar como se deram as partes mais técnicas da coisa toda.</p>
+<p>Ah, e se quiser, comenta aí! ;)</p>
+</div>
+<div class="section" id="bonus-computer-magic-the-end-of-time">
+<h2><strong>Bônus</strong>: Computer Magic - The End of Time</h2>
+<div align="center" class="youtube"><iframe frameborder="0" height="281" src="https://www.youtube.com/embed/1dwNIuN9LN8" width="500"></iframe></div></div>
+</body></html>
+              </div><!-- /.entry-content -->
+              <div class="share">
+                <hr class="share-before">
+                <h3>Word of Mouth</h3>
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style">
+                  <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                  <a class="addthis_button_tweet"></a>
+                  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52210248541aab63"></script>
+                <!-- AddThis Button END -->
+              </div><!-- /.share -->
+              <div class="related">
+                <h3>Related Posts</h3>
+                <ul>
+                  <li><i class="icon-doc-text-inv"></i><a href="http://mexapi.macpress.com.br/2013/08/moving-slackware-to-kernel-310-fixes-to.html">Moving Slackware to kernel 3.10: <span class="caps">NVIDIA</span> and Broadcom drivers&nbsp;fixes</a></li>
+                  <li><i class="icon-doc-text-inv"></i><a href="http://mexapi.macpress.com.br/2013/04/keeping-slackware64-current-multilib-up.html">Keeping Slackware -current, multilib up-to-date kinda&nbsp;automatically</a></li>
+                  <li><i class="icon-doc-text-inv"></i><a href="http://mexapi.macpress.com.br/2013/04/time-machineish-backups-under-linux.html">Time Machine&#8217;ish backups under&nbsp;Linux</a></li>
+                </ul>
+                <hr class="related-after">
+              </div><!-- /.related -->
+              <div class="comments">
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
                   var disqus_identifier = "2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html";
                   (function() {
                   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                   dsq.src = 'http://mexapi.disqus.com/embed.js';
                   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                   })();
-                </script></div></div><div class="three columns"><h4>Categories</h4><ul><li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/development.html">Development</a></li><li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/music.html">Music</a></li><li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/politics.html">Politics</a></li><li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/slackware.html">Slackware</a></li><li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/society.html">Society</a></li></ul><h4>Tags</h4><ul><li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/etica.html">ética</a></li><li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/slackware.html">Slackware</a></li><li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/subversao.html">subversão</a></li><li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/linux.html">Linux</a></li><li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/development.html">development</a></li><li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/tecnologia.html">tecnologia</a></li><li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/utopia.html">utopia</a></li><li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/software.html">software</a></li><li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/vida.html">vida</a></li><li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/revolucao.html">revolução</a></li></ul></div></div></section></div></div><div class="container.nopad bg"><footer class="row" id="credits"><div class="seven columns left-center"><address class="vcard body" id="about"> Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.<br/>Based on the <a href="http://gumbyframework.com" target="_blank">Gumby Framework</a>. MexApi is licensed under <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a>.</address></div><div class="seven columns"><div class="row"><ul class="socbtns"><li><div class="btn primary"><a href="https://github.com/denydias" target="_blank">Github</a></div></li><li><div class="btn twitter"><a href="https://twitter.com/denydias" target="_blank">Twitter</a></div></li><li><div class="btn danger"><a href="https://plus.google.com/104343775245895695882" target="_blank">Google+</a></div></li></ul></div></div></footer></div><link href="http://mexapi.macpress.com.br/theme/min-76d734ae.css" media="all" rel="stylesheet" type="text/css"/><script type="text/javascript">
+                </script>
+              </div><!-- /.comments -->
+            </div><!-- /.eleven.columns -->
+
+            <div class="three columns">
+
+              <h4>Categories</h4>
+              <ul>
+                <li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/development.html">Development</a></li>
+                <li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/music.html">Music</a></li>
+                <li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/politics.html">Politics</a></li>
+                <li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/slackware.html">Slackware</a></li>
+                <li><i class="icon-plus-squared"></i><a href="http://mexapi.macpress.com.br/category/society.html">Society</a></li>
+              </ul>
+
+              <h4>Tags</h4>
+              <ul>
+                <li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/linux.html">Linux</a></li>
+                <li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/tecnologia.html">tecnologia</a></li>
+                <li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/etica.html">ética</a></li>
+                <li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/vida.html">vida</a></li>
+                <li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/revolucao.html">revolução</a></li>
+                <li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/development.html">development</a></li>
+                <li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/utopia.html">utopia</a></li>
+                <li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/subversao.html">subversão</a></li>
+                <li class="tag-2"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/software.html">software</a></li>
+                <li class="tag-1"><i class="icon-tag"></i><a href="http://mexapi.macpress.com.br/tag/slackware.html">Slackware</a></li>
+              </ul>
+
+            </div><!-- /.three .columns -->
+          </div><!-- /.row -->
+        </section><!-- /#content -->
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <div class="container.nopad bg">
+      <footer id="credits" class="row">
+        <div class="seven columns left-center">
+          <address id="about" class="vcard body">
+            Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.<br />
+            Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>. MexApi is licensed under <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a>.
+          </address>
+        </div><!-- /.seven .columns .left-center -->
+        <div class="seven columns">
+          <div class="row">
+            <ul class="socbtns">
+              <li><div class="btn primary"><a href="https://github.com/denydias" target="_blank">Github</a></div></li>
+              <li><div class="btn twitter"><a href="https://twitter.com/denydias" target="_blank">Twitter</a></div></li>
+              <li><div class="btn danger"><a href="https://plus.google.com/104343775245895695882" target="_blank">Google+</a></div></li>
+            </ul><!-- /.socbtns -->
+          </div><!-- /.row -->
+        </div><!-- /.seven .columns -->
+      </footer><!-- /#credits -->
+    </div><!-- /.container.nopad .bg -->
+
+    <link rel="stylesheet" type="text/css" media="all" href="http://mexapi.macpress.com.br/theme/min-76d734ae.css" />
+    <script type="text/javascript">
         var disqus_shortname = 'mexapi';
         (function () {
             var s = document.createElement('script'); s.async = true;
@@ -13,7 +198,12 @@
             s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
-    </script><script src="http://mexapi.macpress.com.br/theme/js/libs/modernizr-2.6.2.min.js"></script><script src="http://mexapi.macpress.com.br/theme/js/libs/jquery-1.9.1.min.js"></script><script src="http://mexapi.macpress.com.br/theme/js/libs/gumby.min.js"></script><script src="http://mexapi.macpress.com.br/theme/js/plugins.js"></script><script type="text/javascript">
+    </script>
+    <script src="http://mexapi.macpress.com.br/theme/js/libs/modernizr-2.6.2.min.js"></script>
+    <script src="http://mexapi.macpress.com.br/theme/js/libs/jquery-1.9.1.min.js"></script>
+    <script src="http://mexapi.macpress.com.br/theme/js/libs/gumby.min.js"></script>
+    <script src="http://mexapi.macpress.com.br/theme/js/plugins.js"></script>
+    <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -21,4 +211,7 @@
       
       ga('create', 'UA-43437542-1', 'macpress.com.br');
       ga('send', 'pageview');
-    </script></body></html>
+    </script>
+
+  </body>
+</html>
