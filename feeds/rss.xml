@@ -1,5 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MexApi</title><link>http://mexapi.macpress.com.br/</link><description>This is not an API</description><atom:link href="http://mexapi.macpress.com.br/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 30 Aug 2013 11:12:46 -0300</lastBuildDate><item><title>Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub</title><link>http://mexapi.macpress.com.br/2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html</link><description>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;My oh my! Migrei meu blog! E estou felicíssimo com o resultado!&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MexApi</title><link>http://mexapi.macpress.com.br/</link><description>This is not an API</description><atom:link href="http://mexapi.macpress.com.br/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 03 Sep 2013 23:59:52 -0300</lastBuildDate><item><title>Migrei meu blog: o ambiente de desenvolvimento</title><link>http://mexapi.macpress.com.br/2013/09/migrei-meu-blog-o-ambiente-de-desenvolvimento.html</link><description>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;No artigo anterior, expus as razões que me levaram a migrar do insosso Blogger para uma plataforma completamente nova (ao menos para mim): o &lt;a class="reference external" href="http://docs.getpelican.com/en/3.2/"&gt;Pelican&lt;/a&gt;. Agora vou contar como isso se deu do ponto de vista mais técnico, de desenvolvimento para a web mesmo.&lt;/p&gt;
+&lt;p&gt;Não vou tratar dos aspectos básicos deste ambiente. Há muitos bons artigos sobre como instalar e sair usando o Pelican por aí. Só para citar alguns:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docs.getpelican.com/en/3.2/getting_started.html"&gt;Getting Started&lt;/a&gt;, documentação oficial do Pelican, em inglês.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://duncanlock.net/blog/2013/05/17/how-i-built-this-website-using-pelican-part-1-setup/"&gt;How I built this website, using Pelican&lt;/a&gt;, por Duncan Lock, em inglês.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://martinbrochhaus.com/pelican2.html"&gt;Pelican and Github Pages&lt;/a&gt;, por Martin Brochhaus, em inglês.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://rodrigoamaral.net/2013/07/16/tutorial-criando-sites-estaticos-com-python-e-pelican/"&gt;Tutorial: Criando sites estáticos com Python e Pelican&lt;/a&gt;, por Rodrigo Amaral, em português.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Também não vou escrever esse texto em inglês, como costumo fazer com os artigos técnicos que publico. Como visto na lista acima, há bastante conteúdo em inglês disponível sobre o tema (e se procurar tem muito mais). Por outro lado, há bem pouco conteúdo &lt;a class="reference external" href="http://goo.gl/mujkou"&gt;em português&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O que vou abordar aqui são aspectos como:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Uso do &lt;a class="reference internal" href="#virtualenv-virtualenvwrapper"&gt;virtualenv + virtualenvwrapper&lt;/a&gt; no contexto do Pelican;&lt;/li&gt;
+&lt;li&gt;Possíveis &lt;a class="reference internal" href="#problemas-e-automacao-das-dependencias"&gt;problemas e automação das dependências&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Configuração de um ambiente de desenvolvimento &lt;a class="reference internal" href="#usando-o-webserver-local"&gt;usando o webserver local&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Customização de um tema para as suas necessidades;&lt;/li&gt;
+&lt;li&gt;Workflow cotidiano, de um novo post ao GitHub;&lt;/li&gt;
+&lt;li&gt;Alguns aspectos sobre o licenciamento do conteúdo que produzo.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class="warning label"&gt;Atenção!!!&lt;/p&gt;
+&lt;p&gt;O &lt;span class="caps"&gt;OS&lt;/span&gt; que uso todo o dia é o &lt;a class="reference external" href="/2012/11/subversao-tecnologica-do-mac-os-x-para.html#.UiZwQOdDszs"&gt;Slackware Linux&lt;/a&gt;. Logo é evidente que a maioria dos comandos, caminhos e configurações que indico são apropriadas a essa distribuição. Porém não deve ser problema para quem conhece um pouco de *nix adaptar o que for necessário para o seu ambiente. Usa Windows? Morra!&lt;/p&gt;
+&lt;p&gt;Outro aspecto importante da minha abordagem: tendo como base o conhecimento que possuo das ferramentas no momento em que as uso, procuro sempre utilizá-las do modo mais simples e elegante possível, sendo que por simplicidade eu entendo como um ambiente cujos pontos de falha sejam minimizados, e por elegância eu entendo como um workflow prático e facilmente reproduzível.&lt;/p&gt;
+&lt;p&gt;Beleza? Então ‘râmulá’!&lt;/p&gt;
+&lt;div class="section" id="virtualenv-virtualenvwrapper"&gt;
+&lt;h2&gt;Virtualenv + Virtualenvwrapper&lt;/h2&gt;
+&lt;p&gt;Uma das ferramentas mais legais do Python para manter ambientes isolados é o &lt;a class="reference external" href="http://www.virtualenv.org/en/latest/"&gt;virtualenv&lt;/a&gt;. E o addon imprescindível para quem usa o virtualenv é o &lt;a class="reference external" href="http://virtualenvwrapper.readthedocs.org/en/latest/"&gt;virtualenvwrapper&lt;/a&gt;. Do site do wrapper:&lt;/p&gt;
+&lt;blockquote&gt;
+virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.&lt;/blockquote&gt;
+&lt;p&gt;Instalar os dois está além do escopo deste artigo, mas os manuais estão aí nos links de cada um. O que importa aqui é como usá-los no contexto do Pelican.&lt;/p&gt;
+&lt;p&gt;Depois de instalar os dois e o &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; (claro), a coisa toda é tão simples como:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; mkvirtualenv pelican
+&lt;span class="gp"&gt;$&lt;/span&gt; workon meusite
+&lt;span class="gp"&gt;(meusite)$&lt;/span&gt; pip install pelican
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A partir deste ponto, tudo o que você fizer no Python estará confinado ao ambiente &lt;tt class="docutils literal"&gt;meusite&lt;/tt&gt;. Se fizer uma besteira qualquer e quiser começar novamente, basta criar outro ambiente e, se quiser, apagar o antigo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; rmvirtualenv meusite
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Rápido, rasteiro, elegante.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="problemas-e-automacao-das-dependencias"&gt;
+&lt;h2&gt;Problemas e Automação das Dependências&lt;/h2&gt;
+&lt;p&gt;Eu enfrentei alguns problemas com as dependências do Pelican no Slackware. A documentação diz que ele instala essas dependências automaticamente, mas não foi o que ocorreu comigo. Não sei se por questões específicas do Slackware ou do próprio &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;, que não ‘sabe’ que a versão mais atual do &lt;tt class="docutils literal"&gt;pytz&lt;/tt&gt; é a &lt;tt class="docutils literal"&gt;2013b&lt;/tt&gt;. Por isso cabe um adendo para os que enfrentarem problemas semelhantes.&lt;/p&gt;
+&lt;p&gt;Para instalar as dependências do Pelican, uma vez dentro do virtualenv apropriado, rode o comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;(meusite)$&lt;/span&gt; pip install feedgenerator jinja2 pygments docutils &lt;span class="nv"&gt;pytz&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;2013b blinker unidecode typogrify pelican
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Esta é a instalação mais básica do Pelican. No entanto, para conseguir tudo que eu fiz aqui no MexApi, tive que instalar algumas outras coisas. Boa parte do que instalei é bastante genérico em relação aos recursos mais úteis do Pelican, dos plugins mais importantes e os temas mais cheios de firulas (o tema básico roda bem com a instalação padrão). Se você pretende que seu blog tenha alguns recursos mais legais, para facilitar a sua e a minha vida (no caso de uma reinstalação do ambiente), eu disponibilizei um &lt;a class="reference external" href="https://github.com/denydias/mexapi/blob/master/stable-req.txt"&gt;arquivo&lt;/a&gt; que contém todos os módulos instalados em meu ambiente. Para instalar tudo em um tapa só:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;(meusite)$&lt;/span&gt; pip install -r stable-req.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="usando-o-webserver-local"&gt;
+&lt;h2&gt;Usando o Webserver Local&lt;/h2&gt;
+&lt;p&gt;O Pelican é legal. Ele vem com um &lt;tt class="docutils literal"&gt;Makefile&lt;/tt&gt; que, dentre os muitos recursos legais que há nele, permite que você rode um webserver para fazer o preview dos seus artigos ou desenvolver seus temas. Deste modo, basta fazer isso:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; make devserver
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Legal, né? A partir daí, basta digitar &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;http://localhost:8000/&lt;/span&gt;&lt;/tt&gt; e seu site estará lá.&lt;/p&gt;
+&lt;p&gt;Mas peraí! Estamos num *nix e muito provavelmente temos um servidor web instalado e em execução. E muito provavelmente é um Apache. Por quê não usá-lo? Afinal, se eu rodo o &lt;tt class="docutils literal"&gt;make devserver&lt;/tt&gt; do Pelican ele vai comer uma tela de terminal com a saída das requisições &lt;span class="caps"&gt;HTTP&lt;/span&gt;, inúteis neste caso, abrir um serviço completamente redundante em minha máquina e não estará lá o tempo todo rodando. Odeio as redundâncias burras (aquelas que desperdiçam recursos), e essa é uma delas. Então, vamos usar nosso Apache local para fazer isso.&lt;/p&gt;
+&lt;p&gt;Primeiro, configure seu &lt;tt class="docutils literal"&gt;/etc/hosts/&lt;/tt&gt; desta forma:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;127.0.0.1       localhost meusite.local
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O alias (apelido) &lt;tt class="docutils literal"&gt;meusite.local&lt;/tt&gt; pode ser qualquer coisa que te agrade. Esse é o endereço que você vai usar para acessar o seu site localmente, portanto ele pode ter o nome que você quiser. Só lembre-se desse nome para daqui a pouco. Salve e teste.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ping -c3 meusite.local
+&lt;span class="go"&gt;&lt;span class="caps"&gt;PING&lt;/span&gt; localhost (127.0.0.1) 56(84) bytes of data.&lt;/span&gt;
+&lt;span class="go"&gt;64 bytes from localhost (127.0.0.1): icmp_req=1 ttl=64 time=0.045 ms&lt;/span&gt;
+&lt;span class="go"&gt;64 bytes from localhost (127.0.0.1): icmp_req=2 ttl=64 time=0.095 ms&lt;/span&gt;
+&lt;span class="go"&gt;64 bytes from localhost (127.0.0.1): icmp_req=3 ttl=64 time=0.092 ms&lt;/span&gt;
+
+&lt;span class="go"&gt;--- localhost ping statistics ---&lt;/span&gt;
+&lt;span class="go"&gt;3 packets transmitted, 3 received, 0% packet loss, time 1999ms&lt;/span&gt;
+&lt;span class="go"&gt;rtt min/avg/max/mdev = 0.045/0.077/0.095/0.024 ms&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Jóia! Nosso servidor agora responde pelo seu novo nome. Note que ele substituiu sozinho o &lt;tt class="docutils literal"&gt;meusite.local&lt;/tt&gt; por &lt;tt class="docutils literal"&gt;localhost&lt;/tt&gt;, que é o nome ‘de verdade’ do endereço 127.0.0.1 (conhecido como &lt;em&gt;loopback&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Agora vamos fazer uma ‘&lt;em&gt;gambiarra&lt;/em&gt;‘ (in english: trick) no diretório de saída do Pelican para que ele gere o site estático num lugar que o Apache ‘conhece’. Vá para o diretório onde vc instalou o Pelican e rode:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo /srv/httpd/htdocs/meusite output &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo chmod meuusuário:users /srv/httpd/htdocs/meusite
+&lt;span class="gp"&gt;$&lt;/span&gt; rm output
+&lt;span class="gp"&gt;$&lt;/span&gt; ln -s /srv/httpd/htdocs/meusite output
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E depois edite o &lt;tt class="docutils literal"&gt;Makefile&lt;/tt&gt; do Pelican:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;OUTPUTDIR&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/srv/httpd/htdocs/mexapi
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O que fizemos aqui é bastante óbvio, mas cabe explicar assim mesmo. Primeiro criamos um diretório no &lt;tt class="docutils literal"&gt;DocumentRoot&lt;/tt&gt; do Apache. Depois apagamos o diretório de saída do Pelican e o ‘simbolincamos’ (sic) em seguida ao diretório do Apache. Depois instruímos o &lt;tt class="docutils literal"&gt;Makefile&lt;/tt&gt; a gravar os arquivos estáticos gerados no diretório que o Apache enxerga. Tudo isso vai fazer mais sentido daqui a pouco.&lt;/p&gt;
+&lt;p&gt;Agora precisamos ensinar ao Apache que quando acessarmos a &lt;span class="caps"&gt;URL&lt;/span&gt; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;http://meusite.local/&lt;/span&gt;&lt;/tt&gt; (note que não tem a porta), ele precisa nos mostrar nosso super-ultra-mega-blaster-site-gerado-pelo-Pelican. Para isso vamos usar um recurso do Apache conhecido como &lt;tt class="docutils literal"&gt;VirtualHost&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Primeiro, edite seu &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/etc/httpd/extra/httpd-vhosts.conf&lt;/span&gt;&lt;/tt&gt; e coloque isso no final (ou em outro lugar, se for o seu caso):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# main server&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class="s"&gt;*:80&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;ServerName&lt;/span&gt; localhost
+    &lt;span class="nb"&gt;DocumentRoot&lt;/span&gt; &lt;span class="sx"&gt;/srv/httpd/htdocs&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;# mexapi server&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class="s"&gt;*:80&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;ServerName&lt;/span&gt;  mexapi.local
+    &lt;span class="nb"&gt;DocumentRoot&lt;/span&gt; &lt;span class="sx"&gt;/srv/httpd/htdocs/mexapi/&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Depois, edite &lt;tt class="docutils literal"&gt;/etc/httpd/httpd.conf&lt;/tt&gt;, por volta da linha 484:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Virtual hosts&lt;/span&gt;
+&lt;span class="nb"&gt;Include&lt;/span&gt; &lt;span class="sx"&gt;/etc/httpd/extra/httpd-vhosts.conf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note que se você usa Debian, Ubuntu, Mac &lt;span class="caps"&gt;OS&lt;/span&gt; X ou outras distros, suas configurações podem ser bem diferentes dessa. Veja a documentação da sua distro para ver como fazer a mesma coisa. Te garanto que não é difícil.&lt;/p&gt;
+&lt;p&gt;Configurado o &lt;tt class="docutils literal"&gt;VirtualHost&lt;/tt&gt;, basta reiniciar o Apache:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo /etc/rc.d/rc.httpd restart
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora acesse &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;http://localhost/&lt;/span&gt;&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;http://meusite.local/&lt;/span&gt;&lt;/tt&gt; e veja a diferença. Na primeira &lt;span class="caps"&gt;URL&lt;/span&gt;, a página padrão do Apache na sua distro (no Slackware é simplesmente ‘&lt;strong&gt;It works!&lt;/strong&gt;‘). Na segunda, seu site Pelican (claro, se você já gerou alguma coisa. Se não, tente &lt;tt class="docutils literal"&gt;make html&lt;/tt&gt;).&lt;/p&gt;
+&lt;p&gt;Well done, bro! Agora você não precisa mais rodar o webserver do Pelican para ver o seu site (só o &lt;tt class="docutils literal"&gt;make html&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;make publish&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;make regenerate&lt;/tt&gt;) e pode acessá-lo a qualquer hora. Se o seu firewall permite isso, ou se não há firewall algum rodando, pode até acessar o seu site de outro computador em sua rede local ou de seu smartphone ou tablet (o que eu faço para testar o tema em dispositivos móveis). Você vai precisar editar o &lt;tt class="docutils literal"&gt;hosts&lt;/tt&gt; dos dispositivos para o &lt;span class="caps"&gt;IP&lt;/span&gt; do seu servidor local, mas isso eu deixo como exercício para o leitor.&lt;/p&gt;
+&lt;p&gt;Hoje vou parar por aqui porque essa parte já rendeu muito. Depois escrevo a terceira e última parte da série. Se escrevi alguma merda, comenta e que eu corrijo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bonus-nancy-sinatra-sugar-town"&gt;
+&lt;h2&gt;&lt;strong&gt;Bônus&lt;/strong&gt;: Nancy Sinatra - Sugar Town&lt;/h2&gt;
+&lt;div align="center" class="youtube"&gt;&lt;iframe frameborder="0" height="281" src="https://www.youtube.com/embed/pjsh2j7W6Bo" width="500"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Deny Dias</dc:creator><pubDate>Tue, 03 Sep 2013 23:59:52 -0300</pubDate><guid>tag:mexapi.macpress.com.br,2013-09-03:2013/09/migrei-meu-blog-o-ambiente-de-desenvolvimento.html</guid><category>pelican</category><category>python</category><category>development</category><category>web</category><category>open source</category><category>blog</category><category>static html</category><category>virtualenv</category><category>virtualenvwrapper</category><category>apache</category><category>pip</category><category>slackware</category></item><item><title>Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub</title><link>http://mexapi.macpress.com.br/2013/08/migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla.html</link><description>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;My oh my! Migrei meu blog! E estou felicíssimo com o resultado!&lt;/p&gt;
 &lt;p&gt;Primeiro porque isso me deu a oportunidade de aprender para caralho sobre &lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt;, as firulas mais recentes do &lt;span class="caps"&gt;HTML&lt;/span&gt;/&lt;span class="caps"&gt;CSS&lt;/span&gt;/&lt;span class="caps"&gt;JS&lt;/span&gt;, linguagens de marcação até então obscuras para mim (&lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt; e &lt;a class="reference external" href="http://www.methods.co.nz/asciidoc/"&gt;AsciiDoc&lt;/a&gt;) e mais muitas, muitas outras coisas. Segundo porque quando eu criei meu blog, em novembro do ano passado, optei pelo Blogger como algo temporário, para colocar no ar rápido, com o intuito de migrar para algo mais &lt;em&gt;geeky&lt;/em&gt; e que faça o meu estilo, mas que desde então havia deixado de lado, agora está feito. Terceiro porque com isso descobri que a web está voltando, depois de muitas &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Browser_wars"&gt;idas e vindas&lt;/a&gt;, a ser um ambiente civilizado no que diz respeito aos padrões e que tem uma galera porreta que já descorrelacionou conteúdo dinâmico dos stacks do tipo &lt;a class="reference external" href="http://en.wikipedia.org/wiki/LAMP_(software_bundle)"&gt;&lt;span class="caps"&gt;LAMP&lt;/span&gt;&lt;/a&gt;. Quarto porque é um projeto estritamente pessoal e que, como tal, me proprociona muito prazer. E quinto, last but not least, tudo, cedo ou tarde, muda.&lt;/p&gt;
 &lt;p&gt;Mas deixa eu contar como foi isso.&lt;/p&gt;
 &lt;div class="section" id="inception"&gt;
@@ -376,51 +484,4 @@ fanatismo apresentado e intensificado em cada rodada.&lt;/p&gt;
 &lt;div class="section" id="bonus-marilyn-manson-fightsong-mashup-over-green-street-hooligans-by-barinblood2003"&gt;
 &lt;h2&gt;&lt;strong&gt;Bônus&lt;/strong&gt;: Marilyn Manson - Fightsong (mashup over Green Street Hooligans, by barinblood2003)&lt;/h2&gt;
 &lt;div align="center" class="youtube"&gt;&lt;iframe frameborder="0" height="281" src="https://www.youtube.com/embed/UNmWls5RZBY" width="500"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Deny Dias</dc:creator><pubDate>Sun, 16 Dec 2012 22:58:00 -0200</pubDate><guid>tag:mexapi.macpress.com.br,2012-12-16:2012/12/campeoes-mundiais-da-visao-curta.html</guid><category>vida</category><category>futebol</category><category>esporte</category><category>fanatismo</category></item><item><title>O preço da comodidade não é a história</title><link>http://mexapi.macpress.com.br/2012/12/o-preco-da-comodidade-nao-e-historia.html</link><description>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;E o blog vai tomando um ritmo e uma cara, naturalmente. Bom assim.&lt;/p&gt;
-&lt;p&gt;Disse a dois textos atrás que meus parentes de primeiro grau (mãe e
-tios) venderam a fazenda em que as últimas três gerações da família
-cresceram e foram criados. O espólio rendeu aos membros vivos da família
-algum dinheiro.&lt;/p&gt;
-&lt;p&gt;Nenhum deles precisavam desse dinheiro. Merreca. Como dizem "no" Goiás,
-dinheiro de pinga. Ninguém ficou nem mais rico nem mais pobre. Um tio, o
-mais aparecido, fraco do juízo e do meu mais profundo e sincero
-desprezo, comprou uma S-10 cabine dupla e uma &lt;span class="caps"&gt;TV&lt;/span&gt; de 50 e tantas
-polegadas. Outros, incluindo minha mãe, não sei o que fizeram. Enfim, só
-pra dar uma ideia da quantidade de "grana" que estamos falando.&lt;/p&gt;
-&lt;p&gt;Semana passada estive em Goiás. Sempre que vou lá a prioridade é ficar
-com meus pais e visitar alguns membros da família e amigos bem próximos.
-Hoje em dia, por aprendizado e escolha, o que considero "família" é
-restrito a alguns privilegiados (não por eu gostar deles, mas pelas
-pessoas que são) membros que respeito e amo por diversos fatores. São
-eles: meus pais, minha avó paterna (a única avó viva), uma prima de
-segundo grau, minha madrinha/tia-avó e duas primas de primeiro grau
-(dessa vez eu vi uma, outra não). O resto não fede nem cheira.&lt;/p&gt;
-&lt;p&gt;Visitei primeiro minha prima de segundo grau, filha da minha madrinha.
-Entre os mais variados assuntos que conversamos e as sempre presentes
-memórias familiares, conversamos sobre sua mãe, seu estado de saúde e o
-desejo dos filhos de "construírem uma casa menor e mais segura para ela
-morar". E ela me garantiu: "A mamãe é doida pra se mudar de lá para uma
-casa menor."&lt;/p&gt;
-&lt;p&gt;Minha madrinha mora numa casa gigantesca. Tenho consciência que não é
-uma casa nem fácil nem barata de cuidar. Também tenho consciência que é
-uma casa que representa alguns riscos para a saúde dela. Mas essa mesma
-casa é onde ela passou a maior parte de sua vida adulta, teve os seus
-três filhos, todos os seus netos, viu nascer e morrer muita gente. Velou
-sua irmã, seu marido. Viveu alegrias e decepções nos últimos 40 ou 50
-anos… coisa assim. A casa tem história. Muita história. A história da
-minha madrinha vive lá, junto com ela e as demais pessoas que vivem na casa.&lt;/p&gt;
-&lt;p&gt;Ela tem três filhos. Todos são de minha consideração, mas por força da
-empatia e da cumplicidade, eu amo apenas um. Os outros dois eu respeito
-muito, mas é uma relação de respeito e consideração apenas, ao menos pra
-mim. Para eles eu não sei. De modo geral e sem entrar em detalhes por
-razões óbvias, é uma família com acesso a alguns recursos.&lt;/p&gt;
-&lt;p&gt;Dois dias após visitar minha prima, visitei minha madrinha, sua mãe. É
-sempre uma visita deliciosa! Papo gostoso, muito carinho, café e
-biscoitinhos que só o interior "do" Goiás produz. O assunto "mudar da
-casa" surgiu e eu disparei: "Mas e aí, madrinha? A senhora quer se mudar
-dessa casa?" Ela nem pestanejou: "Não! Eu quero ficar aqui até morrer."&lt;/p&gt;
-&lt;p&gt;Repita o título aqui.&lt;/p&gt;
-&lt;div class="section" id="bonus-r-e-m-imitation-of-life"&gt;
-&lt;h2&gt;&lt;strong&gt;Bônus&lt;/strong&gt;: &lt;span class="caps"&gt;R.E.M.&lt;/span&gt;- Imitation of Life&lt;/h2&gt;
-&lt;div align="center" class="youtube"&gt;&lt;iframe frameborder="0" height="281" src="https://www.youtube.com/embed/0vqgdSsfqPs" width="500"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Deny Dias</dc:creator><pubDate>Fri, 14 Dec 2012 07:28:00 -0200</pubDate><guid>tag:mexapi.macpress.com.br,2012-12-14:2012/12/o-preco-da-comodidade-nao-e-historia.html</guid><category>vida</category><category>pais</category><category>história</category><category>dinheiro</category><category>família</category><category>filhos</category></item></channel></rss>
+&lt;/body&gt;&lt;/html&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Deny Dias</dc:creator><pubDate>Sun, 16 Dec 2012 22:58:00 -0200</pubDate><guid>tag:mexapi.macpress.com.br,2012-12-16:2012/12/campeoes-mundiais-da-visao-curta.html</guid><category>vida</category><category>futebol</category><category>esporte</category><category>fanatismo</category></item></channel></rss>
