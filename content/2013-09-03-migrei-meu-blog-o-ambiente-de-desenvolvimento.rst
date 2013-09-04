@@ -86,7 +86,7 @@ O Pelican é legal. Ele vem com um ``Makefile`` que, dentre os muitos recursos l
 
 .. code-block:: console
 
-  $ make devserver
+  (meusite)$ make devserver
 
 Legal, né? A partir daí, basta digitar ``http://localhost:8000/`` e seu site estará lá.
 
