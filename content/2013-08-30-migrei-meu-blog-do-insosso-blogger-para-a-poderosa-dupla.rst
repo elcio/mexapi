@@ -5,6 +5,7 @@ Migrei meu blog: do insosso Blogger para a poderosa dupla Pelican/GitHub
 :category: Development
 :tags: pelican, python, development, web, open source, blog, static html
 :slug: migrei-meu-blog-do-insosso-blogger-para-a-poderosa-dupla
+:parts: migrei-meu-blog
 
 My oh my! Migrei meu blog! E estou felicíssimo com o resultado!
 
