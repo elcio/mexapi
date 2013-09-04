@@ -128,7 +128,7 @@ E depois edite o ``Makefile`` do Pelican:
 
   OUTPUTDIR=/srv/httpd/htdocs/mexapi
 
-O que fizemos aqui é bastante óbvio, mas cabe explicar assim mesmo. Primeiro criamos um diretório no ``DocumentRoot`` do Apache. Depois apagamos o diretório de saída do Pelican e o 'simbolincamos' (sic) em seguida ao diretório do Apache. Depois instruímos o ``Makefile`` a gravar os arquivos estáticos gerados no diretório que o Apache enxerga. Tudo isso vai fazer mais sentido daqui a pouco.
+O que fizemos aqui é bastante óbvio, mas cabe explicar assim mesmo. Primeiro criamos um diretório no ``DocumentRoot`` do Apache e demos ao seu usuário e grupo a propriedade do lugar para que ele escreva coisas lá. É importante notar que não precisa ser o usuário/grupo do Apache, desde que exista leitura e execução para todos neste diretório, ou 755. Depois apagamos o diretório de saída do Pelican e o 'simbolincamos' (sic) em seguida ao diretório do Apache. Depois instruímos o ``Makefile`` a gravar os arquivos estáticos gerados no diretório que o Apache enxerga. Tudo isso vai fazer mais sentido daqui a pouco.
 
 Agora precisamos ensinar ao Apache que quando acessarmos a URL ``http://meusite.local/`` (note que não tem a porta), ele precisa nos mostrar nosso super-ultra-mega-blaster-site-gerado-pelo-Pelican. Para isso vamos usar um recurso do Apache conhecido como ``VirtualHost``.
 
@@ -167,7 +167,7 @@ Agora acesse ``http://localhost/`` e ``http://meusite.local/`` e veja a diferen�
 
 Well done, bro! Agora você não precisa mais rodar o webserver do Pelican para ver o seu site (só o ``make html``, ``make publish`` ou ``make regenerate``) e pode acessá-lo a qualquer hora. Se o seu firewall permite isso, ou se não há firewall algum rodando, pode até acessar o seu site de outro computador em sua rede local ou de seu smartphone ou tablet (o que eu faço para testar o tema em dispositivos móveis). Você vai precisar editar o ``hosts`` dos dispositivos para o IP do seu servidor local, mas isso eu deixo como exercício para o leitor.
 
-Hoje vou parar por aqui porque essa parte já rendeu muito. Depois escrevo a terceira e última parte da série. Se escrevi alguma merda, comenta e que eu corrijo.
+Hoje vou parar por aqui porque essa parte já rendeu muito. Depois escrevo a terceira e última parte da série. Se escrevi alguma merda, comenta aí que eu corrijo.
 
 **Bônus**: Nancy Sinatra - Sugar Town 
 =====================================
