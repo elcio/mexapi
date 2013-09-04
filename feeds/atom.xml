@@ -50,7 +50,7 @@ virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool. The
 &lt;div class="section" id="usando-o-webserver-local"&gt;
 &lt;h2&gt;Usando o Webserver Local&lt;/h2&gt;
 &lt;p&gt;O Pelican é legal. Ele vem com um &lt;tt class="docutils literal"&gt;Makefile&lt;/tt&gt; que, dentre os muitos recursos legais que há nele, permite que você rode um webserver para fazer o preview dos seus artigos ou desenvolver seus temas. Deste modo, basta fazer isso:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; make devserver
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;(meusite)$&lt;/span&gt; make devserver
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Legal, né? A partir daí, basta digitar &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;http://localhost:8000/&lt;/span&gt;&lt;/tt&gt; e seu site estará lá.&lt;/p&gt;
 &lt;p&gt;Mas peraí! Estamos num *nix e muito provavelmente temos um servidor web instalado e em execução. E muito provavelmente é um Apache. Por quê não usá-lo? Afinal, se eu rodo o &lt;tt class="docutils literal"&gt;make devserver&lt;/tt&gt; do Pelican ele vai comer uma tela de terminal com a saída das requisições &lt;span class="caps"&gt;HTTP&lt;/span&gt;, inúteis neste caso, abrir um serviço completamente redundante em minha máquina e não estará lá o tempo todo rodando. Odeio as redundâncias burras (aquelas que desperdiçam recursos), e essa é uma delas. Então, vamos usar nosso Apache local para fazer isso.&lt;/p&gt;
