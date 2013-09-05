@@ -30,6 +30,7 @@ DEFAULT_LANG = u'en'
 TIMEZONE = 'America/Sao_Paulo'
 TIMEZONE_ISO = '-03:00'
 DEFAULT_DATE_FORMAT = ('%c BRT')
+DATE_ISO = '%Y-%m-%dT%X'+TIMEZONE_ISO
 
 # Theme parameters
 THEME = 'themes/mexapi'

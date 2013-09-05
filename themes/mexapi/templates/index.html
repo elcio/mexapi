@@ -28,8 +28,9 @@ This is page {{ articles_page.number }} of {{ SITE_DESCRIPTION }}
                       <h2 class="entry-title" itemprop="name"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}" itemprop="url">{{ article.title }}</a></h2>
                     </header>
                     <footer class="post-info">
-                      <time class="published updated" datetime="{{ article.date.isoformat() }}{{ TIMEZONE_ISO }}" itemprop="datePublished"><abbr title="{{ article.date.isoformat() }}{{ TIMEZONE_ISO }}">{{ article.locale_date }}</abbr></time>
-                      <meta itemprop="dateModified" content="{{ article.date.isoformat() }}{{ TIMEZONE_ISO }}" />
+                      <time datetime="{{ article.date.strftime(DATE_ISO) }}"><abbr title="{{ article.date.strftime(DATE_ISO) }}">{{ article.locale_date }}</abbr></time>
+                      <time class="published hidden" itemprop="datePublished" datetime="{{ article.date.strftime(DATE_ISO) }}">{{ article.date.strftime(DATE_ISO) }}</time>
+                      <time class="updated hidden" itemprop="dateModified" datetime="{{ article.mdate.strftime(DATE_ISO) }}">{{ article.mdate.strftime(DATE_ISO) }}</time>
 {% if article.author %}
                       <address>By <span class="vcard author"><span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name">{{ article.author }}</span></span></span></address>
 {% endif %}

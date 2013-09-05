@@ -48,7 +48,7 @@ h4.sitesubtitle {
   }
 }
 
-/* Article Headings
+/* Article
  - -------------------------------------------------------- */
 div.entry-content h2 {
   font-size: 30px;
@@ -62,6 +62,11 @@ div.entry-content h3 {
   font-size: 1.165em;
   font-weight: 300;
   padding-top: 15px;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
 }
 
 /* Lists
