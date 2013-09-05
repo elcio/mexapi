@@ -2,7 +2,6 @@ Campeões mundiais da visão curta
 ################################
 :date: 2012-12-16 22:58
 :author: Deny Dias
-:category: Society
 :tags: vida, futebol, esporte, fanatismo
 :slug: campeoes-mundiais-da-visao-curta
 

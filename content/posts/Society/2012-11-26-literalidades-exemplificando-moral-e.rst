@@ -2,7 +2,6 @@ Literalidades: exemplificando a moral e a minha bronca com ela
 ##############################################################
 :date: 2012-11-26 15:02
 :author: Deny Dias
-:category: Society
 :tags: moral, vogue, bigthink, ética
 :slug: literalidades-exemplificando-moral-e
 

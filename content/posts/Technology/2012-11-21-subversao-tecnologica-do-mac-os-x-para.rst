@@ -2,7 +2,6 @@ Subversão tecnológica: do Mac OS X para o Slackware Linux em um Apple MacBook 
 #################################################################################
 :date: 2012-11-21 12:22
 :author: Deny Dias
-:category: Slackware
 :tags: MacBook Pro, Linux, introdução, software, Slackware, hardware, Apple, subversão, Mac OS X, tecnologia
 :slug: subversao-tecnologica-do-mac-os-x-para
 

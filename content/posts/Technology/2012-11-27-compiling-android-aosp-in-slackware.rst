@@ -2,7 +2,6 @@ Compiling Android (AOSP) in Slackware
 #####################################
 :date: 2012-11-27 01:07
 :author: Deny Dias
-:category: Slackware
 :tags: java, libGL.so, Switch.pm, Android, Slackware, JDK5, patch, perl, AOSP, JDK6, build, JDK7, compile
 :slug: compiling-android-aosp-in-slackware
 

@@ -2,7 +2,6 @@ Memórias de acesso randômico
 ############################
 :date: 2013-06-01 13:56
 :author: Deny Dias
-:category: Music
 :tags: vida, daft punk, música, revolução, tecnologia, ramdom access memories, criação
 :slug: memorias-de-acesso-randomico
 

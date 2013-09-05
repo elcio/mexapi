@@ -2,7 +2,6 @@ Slackware14, Apple MacBook Pro and audio quircks
 ################################################
 :date: 2012-11-23 12:53
 :author: Deny Dias
-:category: Slackware
 :tags: KDE, ALSA, MacBook Pro, Linux, microphone, Amarok, audio, Slackware, Skype, Apple
 :slug: slackware14-apple-macbook-pro-and-audio
 

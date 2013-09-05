@@ -2,7 +2,6 @@ Migrei meu blog: o ambiente de desenvolvimento
 ##############################################
 :date: 2013-09-03 23:59:52
 :author: Deny Dias
-:category: Development
 :tags: pelican, python, development, web, open source, blog, static html, virtualenv, virtualenvwrapper, apache, pip, slackware
 :slug: migrei-meu-blog-o-ambiente-de-desenvolvimento
 :parts: migrei-meu-blog

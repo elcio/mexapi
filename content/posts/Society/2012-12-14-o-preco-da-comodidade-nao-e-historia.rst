@@ -2,7 +2,6 @@ O preço da comodidade não é a história
 ######################################
 :date: 2012-12-14 07:28
 :author: Deny Dias
-:category: Society
 :tags: vida, pais, história, dinheiro, família, filhos
 :slug: o-preco-da-comodidade-nao-e-historia
 

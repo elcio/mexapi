@@ -2,7 +2,6 @@ Time Machine'ish backups under Linux
 ####################################
 :date: 2013-04-20 01:11
 :author: Deny Dias
-:category: Slackware
 :tags: rsnapshot, network, development, Linux, backup, software, rsync, Slackware
 :slug: time-machineish-backups-under-linux
 

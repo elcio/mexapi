@@ -2,7 +2,6 @@ Sobre o que lembramos de maio de 68
 ###################################
 :date: 2013-06-18 09:57
 :author: Deny Dias
-:category: Politics
 :tags: vida, utopia, microutopia, #outonobrasileiro, sustentabilidade, pós-capitalismo, revolução, dinheiro, subversão, tecnologia
 :slug: sobre-o-que-lembramos-de-maio-de-68
 

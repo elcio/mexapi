@@ -2,7 +2,6 @@ Sério que você se assusta com a hostilização contra partidos políticos?
 #######################################################################
 :date: 2013-06-21 04:48
 :author: Deny Dias
-:category: Politics
 :tags: vida, moral, utopia, fanatismo, #outonobrasileiro, pós-capitalismo, conhecimento, coxinha, ética, política, revolução, 15M
 :slug: serio-que-voce-se-assusta-com
 

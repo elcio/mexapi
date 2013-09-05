@@ -2,7 +2,6 @@ Keeping Slackware -current, multilib up-to-date kinda automatically
 ###################################################################
 :date: 2013-04-24 01:32
 :author: Deny Dias
-:category: Slackware
 :tags: development, slackext, Linux, software, multilib, update, Slackware, -current
 :slug: keeping-slackware64-current-multilib-up
 

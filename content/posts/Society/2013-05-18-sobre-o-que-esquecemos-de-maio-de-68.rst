@@ -2,7 +2,6 @@ Sobre o que esquecemos de maio de 68
 ####################################
 :date: 2013-05-18 22:49
 :author: Deny Dias
-:category: Politics
 :tags: vida, utopia, microutopia, pós-capitalismo, conhecimento, ética, política, revolução, subversão, 15M, tecnologia
 :slug: sobre-o-que-esquecemos-de-maio-de-68
 

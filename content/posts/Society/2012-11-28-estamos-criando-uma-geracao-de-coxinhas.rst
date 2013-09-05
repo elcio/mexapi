@@ -2,7 +2,6 @@ Estamos criando uma geração de coxinhas
 #######################################
 :date: 2012-11-28 15:00
 :author: Deny Dias
-:category: Society
 :tags: vida, moral, coxinha, ética, pais, família, filhos, criação
 :slug: estamos-criando-uma-geracao-de-coxinhas
 
