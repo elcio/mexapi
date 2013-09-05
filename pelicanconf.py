@@ -146,3 +146,9 @@ RELATED_POSTS_MAX = 4
 #   see: http://jinja.pocoo.org/docs/templates/#filters
 #
 #################################
+
+def tagsort(tags):
+  return sorted(tags,lambda a,b:len(b[1])-len(a[1]))
+
+JINJA_FILTERS={'tagsort':tagsort,}
+
