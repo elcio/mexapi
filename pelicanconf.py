@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-from datetime import date
 
 #################################
 #
@@ -13,12 +12,14 @@ from datetime import date
 SITEURL = 'http://mexapi.local'
 OUTPUT_PATH = '/srv/www/htdocs/mexapi/'
 RELATIVE_URLS = False
+DELETE_OUTPUT_DIRECTORY = True
 
 # Site metadata
 AUTHOR = u'Deny Dias'
 SITENAME = u'MexApi'
-SITE_TITLE = 'Deny Dias personal weblog'
 SITESUBTITLE = u'This is not an API'
+SITE_DOMAIN = 'macpress.com.br'
+SITE_TITLE = 'Deny Dias personal weblog'
 SITE_DESCRIPTION = 'Deny Dias personal weblog. Includes his blog, links to his social accounts and resume. This is not an API.'
 COPYRIGHT = u'MexApi is licensed under <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a>.'
 COPYRIGHT_NOLINK = u'MexApi is licensed under CC0.'
@@ -27,6 +28,7 @@ COPYRIGHT_NOLINK = u'MexApi is licensed under CC0.'
 LOCALE = 'C'
 DEFAULT_LANG = u'en'
 TIMEZONE = 'America/Sao_Paulo'
+TIMEZONE_ISO = '-03:00'
 DEFAULT_DATE_FORMAT = ('%c BRT')
 
 # Theme parameters
@@ -35,6 +37,7 @@ TYPOGRIFY = True
 DEFAULT_PAGINATION = 4
 SUMMARY_MAX_LENGTH = 66
 DEFAULT_ORPHANS = 2
+USE_FOLDER_AS_CATEGORY = True
 REVERSE_ARCHIVE_ORDER = True
 DISPLAY_PAGES_SIDEBAR = False
 DISPLAY_PAGES_ON_MENU = False
@@ -85,6 +88,10 @@ CATEGORY_FEED_ATOM = False
 # Social Settings
 #
 #################################
+
+# Twitter Card
+TWITTER_USERNAME = 'denydias'
+TWITTER_ACCOUNT_ID = '13373632'
 
 # Social links
 GITHUB_URL = 'https://github.com/denydias'

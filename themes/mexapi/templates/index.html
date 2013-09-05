@@ -1,4 +1,18 @@
 {% extends "base.html" %}
+{% block title %}
+{% if articles_page.has_previous() and articles_page.number > 1 %}
+{{ SITENAME }}: {{ SITE_TITLE }}, page {{ articles_page.number }}
+{% else %}
+{{ SITENAME }}: {{ SITE_TITLE }}
+{% endif %}
+{% endblock %}
+{% block description %}
+{% if articles_page.has_previous() and articles_page.number > 1 %}
+This is page {{ articles_page.number }} of {{ SITE_DESCRIPTION }}
+{% else %}
+{{ SITE_DESCRIPTION }}
+{% endif %}
+{% endblock %}
 {% block content %}
         <section id="content">
 {% block content_title %}
@@ -11,15 +25,16 @@
                 <li>
                   <article class="hentry">
                     <header>
-                      <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                      <h2 class="entry-title" itemprop="name"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}" itemprop="url">{{ article.title }}</a></h2>
                     </header>
                     <footer class="post-info">
-                      <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
+                      <time class="published updated" datetime="{{ article.date.isoformat() }}{{ TIMEZONE_ISO }}" itemprop="datePublished"><abbr title="{{ article.date.isoformat() }}{{ TIMEZONE_ISO }}">{{ article.locale_date }}</abbr></time>
+                      <meta itemprop="dateModified" content="{{ article.date.isoformat() }}{{ TIMEZONE_ISO }}" />
 {% if article.author %}
-                      <address class="vcard author">By {{ article.author }}</address>
+                      <address>By <span class="vcard author"><span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name">{{ article.author }}</span></span></span></address>
 {% endif %}
                     </footer><!-- /.post-info -->
-                    <div class="entry-content">
+                    <div class="entry-content" itemprop="description">
                       {{ article.summary }}
                     </div><!-- /.entry-content -->
                     <div class="medium primary btn">
